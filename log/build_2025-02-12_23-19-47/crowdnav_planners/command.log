@@ -1,0 +1,1 @@
+Invoking command in '/home/sora/colcon_ws/build/crowdnav_planners': /home/sora/.local/bin/cmake /home/sora/colcon_ws/src/crowdnav_planners -DCMAKE_INSTALL_PREFIX=/home/sora/colcon_ws/install/crowdnav_planners

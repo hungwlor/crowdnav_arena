@@ -1,0 +1,14 @@
+[0.669s] Invoking command in '/home/sora/colcon_ws/build/baselines': PYTHONPATH=/home/sora/colcon_ws/build/baselines/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sora/colcon_ws/build/baselines/build --no-deps
+[0.820s] running develop
+[0.914s] running egg_info
+[0.915s] writing baselines.egg-info/PKG-INFO
+[0.915s] writing dependency_links to baselines.egg-info/dependency_links.txt
+[0.915s] writing requirements to baselines.egg-info/requires.txt
+[0.915s] writing top-level names to baselines.egg-info/top_level.txt
+[0.917s] reading manifest file 'baselines.egg-info/SOURCES.txt'
+[0.919s] writing manifest file 'baselines.egg-info/SOURCES.txt'
+[0.941s] running build_ext
+[0.941s] Creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines.egg-link (link to .)
+[0.942s] 
+[0.942s] Installed /home/sora/colcon_ws/build/baselines
+[1.049s] Invoked command in '/home/sora/colcon_ws/build/baselines' returned '0': PYTHONPATH=/home/sora/colcon_ws/build/baselines/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sora/colcon_ws/build/baselines/build --no-deps

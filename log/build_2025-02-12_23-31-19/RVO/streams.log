@@ -1,0 +1,5 @@
+[0.012s] Invoking command in '/home/sora/colcon_ws/build/RVO': /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/RVO -- -j32 -l32
+[0.348s] [0mCMake Error: The source directory "/home/sora/colcon_ws/src/CrowdNav_Prediction_AttnGraph-main/Python-RVO2" does not exist.
+[0.348s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.348s] gmake: *** [Makefile:668: cmake_check_build_system] Error 1
+[0.352s] Invoked command in '/home/sora/colcon_ws/build/RVO' returned '2': /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/RVO -- -j32 -l32

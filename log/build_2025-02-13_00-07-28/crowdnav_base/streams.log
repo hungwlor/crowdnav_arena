@@ -1,0 +1,20 @@
+[0.747s] Invoking command in '/home/sora/colcon_ws/build/crowdnav_base': CONDA_PROMPT_MODIFIER=(CN) PS1=(venv) (CN) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/sora/colcon_ws/build/crowdnav_base/prefix_override:/home/sora/arena4_ws/src/arena/arena-rosnav/.venv/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/sora/colcon_ws/install/crowdnav_base/lib/python3.10/site-packages:${PYTHONPATH} /home/sora/arena4_ws/src/arena/arena-rosnav/.venv/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sora/colcon_ws/build/crowdnav_base/build --no-deps symlink_data
+[0.875s] /home/sora/arena4_ws/src/arena/arena-rosnav/.venv/lib/python3.10/site-packages/setuptools/_distutils/dist.py:270: UserWarning: Unknown distribution option: 'tests_require'
+[0.875s]   warnings.warn(msg)
+[0.956s] running develop
+[1.072s] running egg_info
+[1.080s] writing crowdnav_base.egg-info/PKG-INFO
+[1.081s] writing dependency_links to crowdnav_base.egg-info/dependency_links.txt
+[1.081s] writing entry points to crowdnav_base.egg-info/entry_points.txt
+[1.081s] writing requirements to crowdnav_base.egg-info/requires.txt
+[1.081s] writing top-level names to crowdnav_base.egg-info/top_level.txt
+[1.099s] reading manifest file 'crowdnav_base.egg-info/SOURCES.txt'
+[1.100s] writing manifest file 'crowdnav_base.egg-info/SOURCES.txt'
+[1.109s] running build_ext
+[1.109s] Creating /home/sora/colcon_ws/install/crowdnav_base/lib/python3.10/site-packages/crowdnav-base.egg-link (link to .)
+[1.110s] Installing test script to /home/sora/colcon_ws/install/crowdnav_base/lib/crowdnav_base
+[1.110s] Installing train script to /home/sora/colcon_ws/install/crowdnav_base/lib/crowdnav_base
+[1.110s] 
+[1.110s] Installed /home/sora/colcon_ws/build/crowdnav_base
+[1.110s] running symlink_data
+[1.131s] Invoked command in '/home/sora/colcon_ws/build/crowdnav_base' returned '0': CONDA_PROMPT_MODIFIER=(CN) PS1=(venv) (CN) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/sora/colcon_ws/build/crowdnav_base/prefix_override:/home/sora/arena4_ws/src/arena/arena-rosnav/.venv/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/sora/colcon_ws/install/crowdnav_base/lib/python3.10/site-packages:${PYTHONPATH} /home/sora/arena4_ws/src/arena/arena-rosnav/.venv/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sora/colcon_ws/build/crowdnav_base/build --no-deps symlink_data

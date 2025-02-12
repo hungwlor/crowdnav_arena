@@ -1,0 +1,8 @@
+[0.007s] Invoking command in '/home/sora/colcon_ws/build/nav2_pyif_controller': CMAKE_PREFIX_PATH=/home/sora/colcon_ws/install/nav2_pyif:/home/sora/colcon_ws/install/nav2_pyif_controller:/home/sora/colcon_ws/install/crowdnav_base:/home/sora/colcon_ws/install/crowdnav_planner:/home/sora/colcon_ws/install/apf_python_example:/opt/ros/humble LD_LIBRARY_PATH=/home/sora/colcon_ws/install/nav2_pyif/lib:/usr/local/cuda/lib64:/home/sora/colcon_ws/install/nav2_pyif_controller/lib:/usr/local/cuda/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/nav2_pyif_controller -- -j32 -l32
+[0.057s] [ 20%] [32mBuilding CXX object CMakeFiles/apf_test.dir/test/apf_test.cpp.o[0m
+[0.057s] [ 40%] [32mBuilding CXX object CMakeFiles/apf_test.dir/src/nav2_pyif_controller.cpp.o[0m
+[0.058s] [ 60%] [32mBuilding CXX object CMakeFiles/nav2_pyif_controller.dir/src/nav2_pyif_controller.cpp.o[0m
+[3.647s] [ 80%] [32m[1mLinking CXX executable apf_test[0m
+[3.673s] [100%] [32m[1mLinking CXX shared library libnav2_pyif_controller.so[0m
+[3.865s] [100%] Built target apf_test
+[3.875s] [100%] Built target nav2_pyif_controller

@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing crowdnav_base.egg-info/PKG-INFO
+writing dependency_links to crowdnav_base.egg-info/dependency_links.txt
+writing entry points to crowdnav_base.egg-info/entry_points.txt
+writing requirements to crowdnav_base.egg-info/requires.txt
+writing top-level names to crowdnav_base.egg-info/top_level.txt
+reading manifest file 'crowdnav_base.egg-info/SOURCES.txt'
+writing manifest file 'crowdnav_base.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/sora/colcon_ws/install/crowdnav_base/lib/python3.10/site-packages/crowdnav-base.egg-link (link to .)
+Installing test script to /home/sora/colcon_ws/install/crowdnav_base/lib/crowdnav_base
+Installing train script to /home/sora/colcon_ws/install/crowdnav_base/lib/crowdnav_base
+
+Installed /home/sora/colcon_ws/build/crowdnav_base
+running symlink_data
+warning: symlink_data: setup script did not provide a directory for 'crowdnav_base/rl/' -- installing right in '/home/sora/colcon_ws/install/crowdnav_base'
+
+error: can't copy '/home/sora/colcon_ws/build/crowdnav_base/crowdnav_base/rl': doesn't exist or not a regular file

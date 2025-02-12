@@ -1,0 +1,23 @@
+[0.643s] Invoking command in '/home/sora/colcon_ws/build/crowdnav_base': PYTHONPATH=/home/sora/colcon_ws/build/crowdnav_base/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sora/colcon_ws/install/crowdnav_base/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sora/colcon_ws/build/crowdnav_base/build --no-deps symlink_data
+[0.856s] running develop
+[0.999s] running egg_info
+[0.999s] creating crowdnav_base.egg-info
+[0.999s] writing crowdnav_base.egg-info/PKG-INFO
+[0.999s] writing dependency_links to crowdnav_base.egg-info/dependency_links.txt
+[0.999s] writing entry points to crowdnav_base.egg-info/entry_points.txt
+[1.000s] writing requirements to crowdnav_base.egg-info/requires.txt
+[1.000s] writing top-level names to crowdnav_base.egg-info/top_level.txt
+[1.000s] writing manifest file 'crowdnav_base.egg-info/SOURCES.txt'
+[1.001s] reading manifest file 'crowdnav_base.egg-info/SOURCES.txt'
+[1.001s] writing manifest file 'crowdnav_base.egg-info/SOURCES.txt'
+[1.037s] running build_ext
+[1.038s] Creating /home/sora/colcon_ws/install/crowdnav_base/lib/python3.10/site-packages/crowdnav-base.egg-link (link to .)
+[1.038s] Installing test script to /home/sora/colcon_ws/install/crowdnav_base/lib/crowdnav_base
+[1.038s] Installing train script to /home/sora/colcon_ws/install/crowdnav_base/lib/crowdnav_base
+[1.038s] 
+[1.038s] Installed /home/sora/colcon_ws/build/crowdnav_base
+[1.038s] running symlink_data
+[1.039s] warning: symlink_data: setup script did not provide a directory for 'share/ament_index/resource_index/packages' -- installing right in '/home/sora/colcon_ws/install/crowdnav_base'
+[1.039s] 
+[1.039s] error: can't copy '/home/sora/colcon_ws/build/crowdnav_base/share/ament_index/resource_index/packages': doesn't exist or not a regular file
+[1.063s] Invoked command in '/home/sora/colcon_ws/build/crowdnav_base' returned '1': PYTHONPATH=/home/sora/colcon_ws/build/crowdnav_base/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sora/colcon_ws/install/crowdnav_base/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sora/colcon_ws/build/crowdnav_base/build --no-deps symlink_data

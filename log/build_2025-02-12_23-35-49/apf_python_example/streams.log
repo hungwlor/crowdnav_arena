@@ -1,0 +1,23 @@
+[0.828s] Invoking command in '/home/sora/colcon_ws/build/apf_python_example': PYTHONPATH=/home/sora/colcon_ws/build/apf_python_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sora/colcon_ws/install/apf_python_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sora/colcon_ws/build/apf_python_example/build --no-deps symlink_data
+[1.016s] running develop
+[1.150s] running egg_info
+[1.150s] creating apf_python_example.egg-info
+[1.150s] writing apf_python_example.egg-info/PKG-INFO
+[1.150s] writing dependency_links to apf_python_example.egg-info/dependency_links.txt
+[1.150s] writing entry points to apf_python_example.egg-info/entry_points.txt
+[1.151s] writing requirements to apf_python_example.egg-info/requires.txt
+[1.151s] writing top-level names to apf_python_example.egg-info/top_level.txt
+[1.151s] writing manifest file 'apf_python_example.egg-info/SOURCES.txt'
+[1.152s] reading manifest file 'apf_python_example.egg-info/SOURCES.txt'
+[1.152s] writing manifest file 'apf_python_example.egg-info/SOURCES.txt'
+[1.184s] running build_ext
+[1.184s] Creating /home/sora/colcon_ws/install/apf_python_example/lib/python3.10/site-packages/apf-python-example.egg-link (link to .)
+[1.185s] 
+[1.185s] Installed /home/sora/colcon_ws/build/apf_python_example
+[1.185s] running symlink_data
+[1.185s] creating /home/sora/colcon_ws/install/apf_python_example/share/ament_index
+[1.185s] creating /home/sora/colcon_ws/install/apf_python_example/share/ament_index/resource_index
+[1.186s] creating /home/sora/colcon_ws/install/apf_python_example/share/ament_index/resource_index/packages
+[1.186s] symbolically linking /home/sora/colcon_ws/build/apf_python_example/resource/apf_python_example -> /home/sora/colcon_ws/install/apf_python_example/share/ament_index/resource_index/packages
+[1.186s] symbolically linking /home/sora/colcon_ws/build/apf_python_example/package.xml -> /home/sora/colcon_ws/install/apf_python_example/share/apf_python_example
+[1.208s] Invoked command in '/home/sora/colcon_ws/build/apf_python_example' returned '0': PYTHONPATH=/home/sora/colcon_ws/build/apf_python_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sora/colcon_ws/install/apf_python_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sora/colcon_ws/build/apf_python_example/build --no-deps symlink_data

@@ -1,0 +1,18 @@
+[0.735s] Invoking command in '/home/sora/colcon_ws/build/apf_python_example': CONDA_PROMPT_MODIFIER=(CN) PS1=(venv) (CN) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/sora/colcon_ws/build/apf_python_example/prefix_override:/home/sora/arena4_ws/src/arena/arena-rosnav/.venv/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/sora/colcon_ws/install/apf_python_example/lib/python3.10/site-packages:${PYTHONPATH} /home/sora/arena4_ws/src/arena/arena-rosnav/.venv/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sora/colcon_ws/build/apf_python_example/build --no-deps symlink_data
+[0.841s] /home/sora/arena4_ws/src/arena/arena-rosnav/.venv/lib/python3.10/site-packages/setuptools/_distutils/dist.py:270: UserWarning: Unknown distribution option: 'tests_require'
+[0.841s]   warnings.warn(msg)
+[0.924s] running develop
+[1.024s] running egg_info
+[1.032s] writing apf_python_example.egg-info/PKG-INFO
+[1.033s] writing dependency_links to apf_python_example.egg-info/dependency_links.txt
+[1.033s] deleting apf_python_example.egg-info/entry_points.txt
+[1.033s] writing requirements to apf_python_example.egg-info/requires.txt
+[1.033s] writing top-level names to apf_python_example.egg-info/top_level.txt
+[1.050s] reading manifest file 'apf_python_example.egg-info/SOURCES.txt'
+[1.051s] writing manifest file 'apf_python_example.egg-info/SOURCES.txt'
+[1.060s] running build_ext
+[1.060s] Creating /home/sora/colcon_ws/install/apf_python_example/lib/python3.10/site-packages/apf-python-example.egg-link (link to .)
+[1.061s] 
+[1.061s] Installed /home/sora/colcon_ws/build/apf_python_example
+[1.061s] running symlink_data
+[1.081s] Invoked command in '/home/sora/colcon_ws/build/apf_python_example' returned '0': CONDA_PROMPT_MODIFIER=(CN) PS1=(venv) (CN) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/sora/colcon_ws/build/apf_python_example/prefix_override:/home/sora/arena4_ws/src/arena/arena-rosnav/.venv/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/sora/colcon_ws/install/apf_python_example/lib/python3.10/site-packages:${PYTHONPATH} /home/sora/arena4_ws/src/arena/arena-rosnav/.venv/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sora/colcon_ws/build/apf_python_example/build --no-deps symlink_data

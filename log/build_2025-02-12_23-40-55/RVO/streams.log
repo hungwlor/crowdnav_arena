@@ -1,0 +1,16 @@
+[0.014s] Invoking command in '/home/sora/colcon_ws/build/RVO': /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/RVO -- -j32 -l32
+[0.349s] [ 45%] Built target RVO
+[0.349s] [ 63%] Built target Blocks
+[0.349s] [ 81%] Built target Circle
+[0.350s] [100%] Built target Roadmap
+[0.509s] Invoked command in '/home/sora/colcon_ws/build/RVO' returned '0': /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/RVO -- -j32 -l32
+[0.510s] Invoking command in '/home/sora/colcon_ws/build/RVO': /home/sora/.local/bin/cmake --install /home/sora/colcon_ws/build/RVO
+[0.526s] -- Install configuration: ""
+[0.526s] -- Up-to-date: /home/sora/colcon_ws/install/RVO/include/RVO.h
+[0.526s] -- Up-to-date: /home/sora/colcon_ws/install/RVO/include/RVOSimulator.h
+[0.526s] -- Up-to-date: /home/sora/colcon_ws/install/RVO/include/Vector2.h
+[0.526s] -- Up-to-date: /home/sora/colcon_ws/install/RVO/lib/libRVO.a
+[0.526s] -- Up-to-date: /home/sora/colcon_ws/install/RVO/bin/Blocks
+[0.526s] -- Up-to-date: /home/sora/colcon_ws/install/RVO/bin/Circle
+[0.526s] -- Up-to-date: /home/sora/colcon_ws/install/RVO/bin/Roadmap
+[0.534s] Invoked command in '/home/sora/colcon_ws/build/RVO' returned '0': /home/sora/.local/bin/cmake --install /home/sora/colcon_ws/build/RVO

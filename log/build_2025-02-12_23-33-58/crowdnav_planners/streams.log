@@ -1,0 +1,32 @@
+[0.381s] Invoking command in '/home/sora/colcon_ws/build/crowdnav_planners': /home/sora/.local/bin/cmake /home/sora/colcon_ws/src/crowdnav_planners -DCMAKE_INSTALL_PREFIX=/home/sora/colcon_ws/install/crowdnav_planners
+[0.398s] [33mCMake Warning (dev) in CMakeLists.txt:
+[0.398s]   No project() command is present.  The top-level CMakeLists.txt file must
+[0.398s]   contain a literal, direct call to the project() command.  Add a line of
+[0.398s]   code such as
+[0.398s] 
+[0.398s]     project(ProjectName)
+[0.398s] 
+[0.398s]   near the top of the file, but after cmake_minimum_required().
+[0.398s] 
+[0.398s]   CMake is pretending there is a "project(Project)" command on the first
+[0.398s]   line.
+[0.398s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.398s] [0m
+[0.438s] -- The C compiler identification is GNU 11.4.0
+[0.487s] -- The CXX compiler identification is GNU 11.4.0
+[0.498s] -- Detecting C compiler ABI info
+[0.551s] -- Detecting C compiler ABI info - done
+[0.562s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.562s] -- Detecting C compile features
+[0.563s] -- Detecting C compile features - done
+[0.566s] -- Detecting CXX compiler ABI info
+[0.626s] -- Detecting CXX compiler ABI info - done
+[0.640s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.640s] -- Detecting CXX compile features
+[0.641s] -- Detecting CXX compile features - done
+[0.642s] -- Configuring done
+[0.643s] -- Generating done
+[0.644s] -- Build files have been written to: /home/sora/colcon_ws/build/crowdnav_planners
+[0.652s] Invoked command in '/home/sora/colcon_ws/build/crowdnav_planners' returned '0': /home/sora/.local/bin/cmake /home/sora/colcon_ws/src/crowdnav_planners -DCMAKE_INSTALL_PREFIX=/home/sora/colcon_ws/install/crowdnav_planners
+[0.653s] Invoking command in '/home/sora/colcon_ws/build/crowdnav_planners': /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/crowdnav_planners -- -j32 -l32
+[0.693s] Invoked command in '/home/sora/colcon_ws/build/crowdnav_planners' returned '0': /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/crowdnav_planners -- -j32 -l32

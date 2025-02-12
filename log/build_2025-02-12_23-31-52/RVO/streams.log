@@ -1,0 +1,52 @@
+[0.011s] Invoking command in '/home/sora/colcon_ws/build/RVO': /home/sora/.local/bin/cmake /home/sora/colcon_ws/src/CrowdNav_Prediction_AttnGraph/Python-RVO2 -DCMAKE_INSTALL_PREFIX=/home/sora/colcon_ws/install/RVO
+[0.369s] -- The C compiler identification is GNU 11.4.0
+[0.369s] -- The CXX compiler identification is GNU 11.4.0
+[0.369s] -- Detecting C compiler ABI info
+[0.369s] -- Detecting C compiler ABI info - done
+[0.369s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.369s] -- Detecting C compile features
+[0.369s] -- Detecting C compile features - done
+[0.369s] -- Detecting CXX compiler ABI info
+[0.369s] -- Detecting CXX compiler ABI info - done
+[0.369s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.369s] -- Detecting CXX compile features
+[0.369s] -- Detecting CXX compile features - done
+[0.369s] -- Configuring done
+[0.369s] -- Generating done
+[0.369s] -- Build files have been written to: /home/sora/colcon_ws/build/RVO
+[0.369s] [0mCMake Deprecation Warning at CMakeLists.txt:33 (cmake_minimum_required):
+[0.370s]   Compatibility with CMake < 2.8.12 will be removed from a future version of
+[0.370s]   CMake.
+[0.370s] 
+[0.370s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.370s]   CMake that the project does not need compatibility with older versions.
+[0.370s] 
+[0.370s] [0m
+[0.373s] Invoked command in '/home/sora/colcon_ws/build/RVO' returned '0': /home/sora/.local/bin/cmake /home/sora/colcon_ws/src/CrowdNav_Prediction_AttnGraph/Python-RVO2 -DCMAKE_INSTALL_PREFIX=/home/sora/colcon_ws/install/RVO
+[0.374s] Invoking command in '/home/sora/colcon_ws/build/RVO': /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/RVO -- -j32 -l32
+[0.415s] [  9%] [32mBuilding CXX object src/CMakeFiles/RVO.dir/Agent.cpp.o[0m
+[0.415s] [ 18%] [32mBuilding CXX object src/CMakeFiles/RVO.dir/KdTree.cpp.o[0m
+[0.415s] [ 27%] [32mBuilding CXX object src/CMakeFiles/RVO.dir/Obstacle.cpp.o[0m
+[0.415s] [ 36%] [32mBuilding CXX object src/CMakeFiles/RVO.dir/RVOSimulator.cpp.o[0m
+[0.844s] [ 45%] [32m[1mLinking CXX static library libRVO.a[0m
+[0.932s] [ 45%] Built target RVO
+[0.939s] [ 54%] [32mBuilding CXX object examples/CMakeFiles/Blocks.dir/Blocks.cpp.o[0m
+[0.940s] [ 63%] [32mBuilding CXX object examples/CMakeFiles/Circle.dir/Circle.cpp.o[0m
+[0.940s] [ 72%] [32mBuilding CXX object examples/CMakeFiles/Roadmap.dir/Roadmap.cpp.o[0m
+[1.168s] [ 81%] [32m[1mLinking CXX executable Circle[0m
+[1.195s] [ 90%] [32m[1mLinking CXX executable Blocks[0m
+[1.229s] [ 90%] Built target Circle
+[1.260s] [ 90%] Built target Blocks
+[1.364s] [100%] [32m[1mLinking CXX executable Roadmap[0m
+[1.424s] [100%] Built target Roadmap
+[1.431s] Invoked command in '/home/sora/colcon_ws/build/RVO' returned '0': /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/RVO -- -j32 -l32
+[1.456s] Invoking command in '/home/sora/colcon_ws/build/RVO': /home/sora/.local/bin/cmake --install /home/sora/colcon_ws/build/RVO
+[1.475s] -- Install configuration: ""
+[1.475s] -- Installing: /home/sora/colcon_ws/install/RVO/include/RVO.h
+[1.475s] -- Installing: /home/sora/colcon_ws/install/RVO/include/RVOSimulator.h
+[1.475s] -- Installing: /home/sora/colcon_ws/install/RVO/include/Vector2.h
+[1.475s] -- Installing: /home/sora/colcon_ws/install/RVO/lib/libRVO.a
+[1.475s] -- Installing: /home/sora/colcon_ws/install/RVO/bin/Blocks
+[1.475s] -- Installing: /home/sora/colcon_ws/install/RVO/bin/Circle
+[1.475s] -- Installing: /home/sora/colcon_ws/install/RVO/bin/Roadmap
+[1.480s] Invoked command in '/home/sora/colcon_ws/build/RVO' returned '0': /home/sora/.local/bin/cmake --install /home/sora/colcon_ws/build/RVO

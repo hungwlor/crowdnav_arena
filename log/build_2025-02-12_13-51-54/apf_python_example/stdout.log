@@ -1,0 +1,34 @@
+running egg_info
+creating ../../../build/apf_python_example/apf_python_example.egg-info
+writing ../../../build/apf_python_example/apf_python_example.egg-info/PKG-INFO
+writing dependency_links to ../../../build/apf_python_example/apf_python_example.egg-info/dependency_links.txt
+writing entry points to ../../../build/apf_python_example/apf_python_example.egg-info/entry_points.txt
+writing requirements to ../../../build/apf_python_example/apf_python_example.egg-info/requires.txt
+writing top-level names to ../../../build/apf_python_example/apf_python_example.egg-info/top_level.txt
+writing manifest file '../../../build/apf_python_example/apf_python_example.egg-info/SOURCES.txt'
+reading manifest file '../../../build/apf_python_example/apf_python_example.egg-info/SOURCES.txt'
+writing manifest file '../../../build/apf_python_example/apf_python_example.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/sora/colcon_ws/build/apf_python_example/build
+creating /home/sora/colcon_ws/build/apf_python_example/build/lib
+creating /home/sora/colcon_ws/build/apf_python_example/build/lib/apf_python_example
+copying apf_python_example/apf.py -> /home/sora/colcon_ws/build/apf_python_example/build/lib/apf_python_example
+copying apf_python_example/__init__.py -> /home/sora/colcon_ws/build/apf_python_example/build/lib/apf_python_example
+running install
+running install_lib
+creating /home/sora/colcon_ws/install/apf_python_example/lib/python3.10/site-packages/apf_python_example
+copying /home/sora/colcon_ws/build/apf_python_example/build/lib/apf_python_example/apf.py -> /home/sora/colcon_ws/install/apf_python_example/lib/python3.10/site-packages/apf_python_example
+copying /home/sora/colcon_ws/build/apf_python_example/build/lib/apf_python_example/__init__.py -> /home/sora/colcon_ws/install/apf_python_example/lib/python3.10/site-packages/apf_python_example
+byte-compiling /home/sora/colcon_ws/install/apf_python_example/lib/python3.10/site-packages/apf_python_example/apf.py to apf.cpython-310.pyc
+byte-compiling /home/sora/colcon_ws/install/apf_python_example/lib/python3.10/site-packages/apf_python_example/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/sora/colcon_ws/install/apf_python_example/share/ament_index
+creating /home/sora/colcon_ws/install/apf_python_example/share/ament_index/resource_index
+creating /home/sora/colcon_ws/install/apf_python_example/share/ament_index/resource_index/packages
+copying resource/apf_python_example -> /home/sora/colcon_ws/install/apf_python_example/share/ament_index/resource_index/packages
+copying package.xml -> /home/sora/colcon_ws/install/apf_python_example/share/apf_python_example
+running install_egg_info
+Copying ../../../build/apf_python_example/apf_python_example.egg-info to /home/sora/colcon_ws/install/apf_python_example/lib/python3.10/site-packages/apf_python_example-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/sora/colcon_ws/build/apf_python_example/install.log'

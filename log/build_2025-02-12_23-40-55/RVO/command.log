@@ -1,0 +1,4 @@
+Invoking command in '/home/sora/colcon_ws/build/RVO': /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/RVO -- -j32 -l32
+Invoked command in '/home/sora/colcon_ws/build/RVO' returned '0': /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/RVO -- -j32 -l32
+Invoking command in '/home/sora/colcon_ws/build/RVO': /home/sora/.local/bin/cmake --install /home/sora/colcon_ws/build/RVO
+Invoked command in '/home/sora/colcon_ws/build/RVO' returned '0': /home/sora/.local/bin/cmake --install /home/sora/colcon_ws/build/RVO

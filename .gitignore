@@ -1,0 +1,6 @@
+build
+install
+src/venv
+src/nav2_pyif
+src/CrowdNav_Prediction_AttnGRaph/Python-RVO2/
+src/CrowdNav_Prediction_AttnGRaph/baselines/

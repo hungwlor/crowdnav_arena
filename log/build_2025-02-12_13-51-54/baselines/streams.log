@@ -1,0 +1,504 @@
+[0.864s] Invoking command in '/home/sora/colcon_ws/src/CrowdNav_Prediction_AttnGraph-main/baselines': PYTHONPATH=/home/sora/colcon_ws/build/baselines/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/baselines build --build-base /home/sora/colcon_ws/build/baselines/build install --record /home/sora/colcon_ws/build/baselines/install.log --single-version-externally-managed
+[1.058s] running egg_info
+[1.058s] creating ../../../build/baselines/baselines.egg-info
+[1.058s] writing ../../../build/baselines/baselines.egg-info/PKG-INFO
+[1.058s] writing dependency_links to ../../../build/baselines/baselines.egg-info/dependency_links.txt
+[1.059s] writing requirements to ../../../build/baselines/baselines.egg-info/requires.txt
+[1.059s] writing top-level names to ../../../build/baselines/baselines.egg-info/top_level.txt
+[1.059s] writing manifest file '../../../build/baselines/baselines.egg-info/SOURCES.txt'
+[1.062s] reading manifest file '../../../build/baselines/baselines.egg-info/SOURCES.txt'
+[1.062s] adding license file 'LICENSE'
+[1.063s] writing manifest file '../../../build/baselines/baselines.egg-info/SOURCES.txt'
+[1.063s] running build
+[1.063s] running build_py
+[1.063s] creating /home/sora/colcon_ws/build/baselines/build
+[1.063s] creating /home/sora/colcon_ws/build/baselines/build/lib
+[1.063s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines
+[1.063s] copying baselines/run.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines
+[1.064s] copying baselines/results_plotter.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines
+[1.064s] copying baselines/logger.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines
+[1.064s] copying baselines/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines
+[1.064s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/acer
+[1.064s] copying baselines/acer/buffer.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/acer
+[1.064s] copying baselines/acer/policies.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/acer
+[1.064s] copying baselines/acer/defaults.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/acer
+[1.064s] copying baselines/acer/runner.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/acer
+[1.064s] copying baselines/acer/acer.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/acer
+[1.064s] copying baselines/acer/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/acer
+[1.064s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/trpo_mpi
+[1.064s] copying baselines/trpo_mpi/defaults.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/trpo_mpi
+[1.064s] copying baselines/trpo_mpi/trpo_mpi.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/trpo_mpi
+[1.064s] copying baselines/trpo_mpi/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/trpo_mpi
+[1.064s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg
+[1.064s] copying baselines/ddpg/models.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg
+[1.064s] copying baselines/ddpg/test_smoke.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg
+[1.064s] copying baselines/ddpg/ddpg_learner.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg
+[1.064s] copying baselines/ddpg/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg
+[1.065s] copying baselines/ddpg/memory.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg
+[1.065s] copying baselines/ddpg/ddpg.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg
+[1.065s] copying baselines/ddpg/noise.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg
+[1.065s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail
+[1.065s] copying baselines/gail/gail-eval.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail
+[1.065s] copying baselines/gail/run_mujoco.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail
+[1.065s] copying baselines/gail/mlp_policy.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail
+[1.065s] copying baselines/gail/trpo_mpi.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail
+[1.065s] copying baselines/gail/statistics.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail
+[1.065s] copying baselines/gail/behavior_clone.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail
+[1.065s] copying baselines/gail/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail
+[1.066s] copying baselines/gail/adversary.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail
+[1.066s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/acktr
+[1.066s] copying baselines/acktr/utils.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/acktr
+[1.066s] copying baselines/acktr/kfac_utils.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/acktr
+[1.066s] copying baselines/acktr/defaults.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/acktr
+[1.066s] copying baselines/acktr/kfac.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/acktr
+[1.066s] copying baselines/acktr/acktr.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/acktr
+[1.066s] copying baselines/acktr/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/acktr
+[1.066s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/a2c
+[1.066s] copying baselines/a2c/utils.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/a2c
+[1.066s] copying baselines/a2c/a2c.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/a2c
+[1.067s] copying baselines/a2c/runner.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/a2c
+[1.067s] copying baselines/a2c/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/a2c
+[1.067s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2
+[1.067s] copying baselines/ppo2/microbatched_model.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2
+[1.067s] copying baselines/ppo2/model.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2
+[1.067s] copying baselines/ppo2/defaults.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2
+[1.067s] copying baselines/ppo2/runner.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2
+[1.067s] copying baselines/ppo2/test_microbatches.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2
+[1.067s] copying baselines/ppo2/ppo2.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2
+[1.067s] copying baselines/ppo2/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2
+[1.067s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1
+[1.068s] copying baselines/ppo1/cnn_policy.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1
+[1.068s] copying baselines/ppo1/run_mujoco.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1
+[1.068s] copying baselines/ppo1/run_atari.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1
+[1.068s] copying baselines/ppo1/run_robotics.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1
+[1.068s] copying baselines/ppo1/run_humanoid.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1
+[1.068s] copying baselines/ppo1/mlp_policy.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1
+[1.068s] copying baselines/ppo1/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1
+[1.068s] copying baselines/ppo1/pposgd_simple.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1
+[1.068s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/bench
+[1.068s] copying baselines/bench/benchmarks.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/bench
+[1.069s] copying baselines/bench/test_monitor.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/bench
+[1.069s] copying baselines/bench/monitor.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/bench
+[1.069s] copying baselines/bench/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/bench
+[1.069s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.069s] copying baselines/common/tf_util.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.069s] copying baselines/common/tile_images.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.069s] copying baselines/common/console_util.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.069s] copying baselines/common/models.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.069s] copying baselines/common/running_mean_std.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.069s] copying baselines/common/policies.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.069s] copying baselines/common/dataset.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.069s] copying baselines/common/retro_wrappers.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.070s] copying baselines/common/schedules.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.070s] copying baselines/common/math_util.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.070s] copying baselines/common/misc_util.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.070s] copying baselines/common/cg.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.070s] copying baselines/common/test_mpi_util.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.070s] copying baselines/common/mpi_adam.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.070s] copying baselines/common/input.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.070s] copying baselines/common/runners.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.071s] copying baselines/common/distributions.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.071s] copying baselines/common/cmd_util.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.071s] copying baselines/common/mpi_moments.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.071s] copying baselines/common/mpi_running_mean_std.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.071s] copying baselines/common/mpi_fork.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.071s] copying baselines/common/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.071s] copying baselines/common/atari_wrappers.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.071s] copying baselines/common/segment_tree.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.071s] copying baselines/common/wrappers.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.071s] copying baselines/common/mpi_adam_optimizer.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.071s] copying baselines/common/plot_util.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.072s] copying baselines/common/mpi_util.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common
+[1.072s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/her
+[1.072s] copying baselines/her/replay_buffer.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/her
+[1.072s] copying baselines/her/her.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/her
+[1.072s] copying baselines/her/actor_critic.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/her
+[1.072s] copying baselines/her/normalizer.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/her
+[1.072s] copying baselines/her/util.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/her
+[1.072s] copying baselines/her/her_sampler.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/her
+[1.072s] copying baselines/her/rollout.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/her
+[1.072s] copying baselines/her/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/her
+[1.072s] copying baselines/her/ddpg.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/her
+[1.072s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq
+[1.073s] copying baselines/deepq/replay_buffer.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq
+[1.073s] copying baselines/deepq/utils.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq
+[1.073s] copying baselines/deepq/models.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq
+[1.073s] copying baselines/deepq/defaults.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq
+[1.073s] copying baselines/deepq/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq
+[1.073s] copying baselines/deepq/deepq.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq
+[1.073s] copying baselines/deepq/build_graph.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq
+[1.073s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail/dataset
+[1.073s] copying baselines/gail/dataset/mujoco_dset.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail/dataset
+[1.073s] copying baselines/gail/dataset/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail/dataset
+[1.073s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.073s] copying baselines/common/tests/test_env_after_learn.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.073s] copying baselines/common/tests/test_schedules.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.073s] copying baselines/common/tests/test_cartpole.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.074s] copying baselines/common/tests/test_mnist.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.074s] copying baselines/common/tests/test_segment_tree.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.074s] copying baselines/common/tests/test_fetchreach.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.074s] copying baselines/common/tests/util.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.074s] copying baselines/common/tests/test_tf_util.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.074s] copying baselines/common/tests/test_identity.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.074s] copying baselines/common/tests/test_fixed_sequence.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.074s] copying baselines/common/tests/test_doc_examples.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.074s] copying baselines/common/tests/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.074s] copying baselines/common/tests/test_plot_util.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.074s] copying baselines/common/tests/test_serialization.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.074s] copying baselines/common/tests/test_with_mpi.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests
+[1.075s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env
+[1.075s] copying baselines/common/vec_env/vec_normalize.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env
+[1.075s] copying baselines/common/vec_env/vec_video_recorder.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env
+[1.075s] copying baselines/common/vec_env/vec_monitor.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env
+[1.075s] copying baselines/common/vec_env/vec_remove_dict_obs.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env
+[1.075s] copying baselines/common/vec_env/test_vec_env.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env
+[1.075s] copying baselines/common/vec_env/util.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env
+[1.075s] copying baselines/common/vec_env/vec_env.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env
+[1.075s] copying baselines/common/vec_env/shmem_vec_env.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env
+[1.075s] copying baselines/common/vec_env/subproc_vec_env.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env
+[1.075s] copying baselines/common/vec_env/vec_frame_stack.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env
+[1.076s] copying baselines/common/vec_env/dummy_vec_env.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env
+[1.076s] copying baselines/common/vec_env/test_video_recorder.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env
+[1.076s] copying baselines/common/vec_env/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env
+[1.076s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/envs
+[1.076s] copying baselines/common/tests/envs/identity_env.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/envs
+[1.076s] copying baselines/common/tests/envs/fixed_sequence_env.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/envs
+[1.076s] copying baselines/common/tests/envs/identity_env_test.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/envs
+[1.076s] copying baselines/common/tests/envs/mnist_env.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/envs
+[1.076s] copying baselines/common/tests/envs/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/envs
+[1.076s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/experiment
+[1.076s] copying baselines/her/experiment/play.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/experiment
+[1.077s] copying baselines/her/experiment/plot.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/experiment
+[1.077s] copying baselines/her/experiment/config.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/experiment
+[1.077s] copying baselines/her/experiment/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/experiment
+[1.077s] creating /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments
+[1.077s] copying baselines/deepq/experiments/train_cartpole.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments
+[1.077s] copying baselines/deepq/experiments/enjoy_cartpole.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments
+[1.077s] copying baselines/deepq/experiments/enjoy_mountaincar.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments
+[1.077s] copying baselines/deepq/experiments/enjoy_pong.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments
+[1.077s] copying baselines/deepq/experiments/train_mountaincar.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments
+[1.077s] copying baselines/deepq/experiments/train_pong.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments
+[1.077s] copying baselines/deepq/experiments/custom_cartpole.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments
+[1.078s] copying baselines/deepq/experiments/__init__.py -> /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments
+[1.078s] running install
+[1.078s] running install_lib
+[1.078s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines
+[1.078s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acer
+[1.078s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/acer/buffer.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acer
+[1.078s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/acer/policies.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acer
+[1.078s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/acer/defaults.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acer
+[1.078s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/acer/runner.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acer
+[1.078s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/acer/acer.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acer
+[1.078s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/acer/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acer
+[1.078s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/trpo_mpi
+[1.078s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/trpo_mpi/defaults.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/trpo_mpi
+[1.079s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/trpo_mpi/trpo_mpi.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/trpo_mpi
+[1.079s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/trpo_mpi/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/trpo_mpi
+[1.079s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg
+[1.079s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg/models.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg
+[1.079s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg/test_smoke.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg
+[1.079s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg/ddpg_learner.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg
+[1.079s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg
+[1.079s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg/memory.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg
+[1.079s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg/ddpg.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg
+[1.079s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ddpg/noise.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg
+[1.080s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail
+[1.080s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail/gail-eval.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail
+[1.080s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail/run_mujoco.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail
+[1.080s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail/dataset
+[1.080s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail/dataset/mujoco_dset.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail/dataset
+[1.080s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail/dataset/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail/dataset
+[1.080s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail/mlp_policy.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail
+[1.080s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail/trpo_mpi.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail
+[1.080s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail/statistics.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail
+[1.080s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail/behavior_clone.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail
+[1.080s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail
+[1.080s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/gail/adversary.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail
+[1.081s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acktr
+[1.081s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/acktr/utils.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acktr
+[1.081s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/acktr/kfac_utils.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acktr
+[1.081s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/acktr/defaults.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acktr
+[1.081s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/acktr/kfac.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acktr
+[1.081s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/acktr/acktr.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acktr
+[1.081s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/acktr/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acktr
+[1.081s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/a2c
+[1.081s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/a2c/utils.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/a2c
+[1.082s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/a2c/a2c.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/a2c
+[1.082s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/a2c/runner.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/a2c
+[1.082s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/a2c/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/a2c
+[1.082s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2
+[1.082s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2/microbatched_model.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2
+[1.082s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2/model.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2
+[1.082s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2/defaults.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2
+[1.082s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2/runner.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2
+[1.082s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2/test_microbatches.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2
+[1.082s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2/ppo2.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2
+[1.082s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo2/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2
+[1.082s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/run.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines
+[1.083s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1
+[1.083s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1/cnn_policy.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1
+[1.083s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1/run_mujoco.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1
+[1.083s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1/run_atari.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1
+[1.083s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1/run_robotics.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1
+[1.083s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1/run_humanoid.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1
+[1.083s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1/mlp_policy.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1
+[1.083s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1
+[1.083s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/ppo1/pposgd_simple.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1
+[1.083s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/results_plotter.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines
+[1.083s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/bench
+[1.083s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/bench/benchmarks.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/bench
+[1.083s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/bench/test_monitor.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/bench
+[1.083s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/bench/monitor.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/bench
+[1.084s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/bench/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/bench
+[1.084s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/logger.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines
+[1.084s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.084s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tf_util.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.084s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tile_images.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.084s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/console_util.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.084s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/models.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.084s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/running_mean_std.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.084s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/policies.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.084s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/dataset.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.084s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/retro_wrappers.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.084s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.084s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/test_env_after_learn.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.085s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/test_schedules.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.085s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/test_cartpole.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.085s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/test_mnist.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.085s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/test_segment_tree.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.085s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/test_fetchreach.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.085s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/util.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.085s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/test_tf_util.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.085s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/envs
+[1.085s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/envs/identity_env.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/envs
+[1.085s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/envs/fixed_sequence_env.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/envs
+[1.085s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/envs/identity_env_test.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/envs
+[1.085s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/envs/mnist_env.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/envs
+[1.086s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/envs/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/envs
+[1.086s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/test_identity.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.086s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/test_fixed_sequence.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.086s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/test_doc_examples.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.086s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.086s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/test_plot_util.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.086s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/test_serialization.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.086s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/tests/test_with_mpi.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests
+[1.086s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/schedules.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.086s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/math_util.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.086s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/misc_util.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.086s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/cg.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.086s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/test_mpi_util.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.086s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/mpi_adam.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.087s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/input.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.087s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/runners.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.087s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/distributions.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.087s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/cmd_util.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.087s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/mpi_moments.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.087s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/mpi_running_mean_std.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.087s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/mpi_fork.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.087s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.087s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/atari_wrappers.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.087s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/segment_tree.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.087s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/wrappers.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.087s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/mpi_adam_optimizer.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.088s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/plot_util.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.088s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/mpi_util.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common
+[1.088s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env
+[1.088s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env/vec_normalize.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env
+[1.088s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env/vec_video_recorder.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env
+[1.088s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env/vec_monitor.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env
+[1.088s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env/vec_remove_dict_obs.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env
+[1.088s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env/test_vec_env.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env
+[1.088s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env/util.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env
+[1.088s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env/vec_env.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env
+[1.088s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env/shmem_vec_env.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env
+[1.088s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env/subproc_vec_env.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env
+[1.088s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env/vec_frame_stack.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env
+[1.088s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env/dummy_vec_env.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env
+[1.089s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env/test_video_recorder.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env
+[1.089s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/common/vec_env/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env
+[1.089s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her
+[1.089s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/replay_buffer.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her
+[1.089s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/her.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her
+[1.089s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/actor_critic.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her
+[1.089s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/normalizer.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her
+[1.089s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/util.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her
+[1.089s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/her_sampler.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her
+[1.089s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/experiment
+[1.089s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/experiment/play.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/experiment
+[1.089s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/experiment/plot.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/experiment
+[1.089s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/experiment/config.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/experiment
+[1.089s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/experiment/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/experiment
+[1.090s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/rollout.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her
+[1.090s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her
+[1.090s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/her/ddpg.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her
+[1.090s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines
+[1.090s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq
+[1.090s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/replay_buffer.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq
+[1.090s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/utils.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq
+[1.090s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/models.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq
+[1.090s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/defaults.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq
+[1.090s] creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments
+[1.090s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments/train_cartpole.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments
+[1.090s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments/enjoy_cartpole.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments
+[1.091s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments/enjoy_mountaincar.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments
+[1.091s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments/enjoy_pong.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments
+[1.091s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments/train_mountaincar.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments
+[1.091s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments/train_pong.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments
+[1.091s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments/custom_cartpole.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments
+[1.091s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/experiments/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments
+[1.091s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/__init__.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq
+[1.091s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/deepq.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq
+[1.091s] copying /home/sora/colcon_ws/build/baselines/build/lib/baselines/deepq/build_graph.py -> /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq
+[1.091s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acer/buffer.py to buffer.cpython-310.pyc
+[1.091s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acer/policies.py to policies.cpython-310.pyc
+[1.091s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acer/defaults.py to defaults.cpython-310.pyc
+[1.091s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acer/runner.py to runner.cpython-310.pyc
+[1.091s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acer/acer.py to acer.cpython-310.pyc
+[1.092s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acer/__init__.py to __init__.cpython-310.pyc
+[1.092s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/trpo_mpi/defaults.py to defaults.cpython-310.pyc
+[1.092s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/trpo_mpi/trpo_mpi.py to trpo_mpi.cpython-310.pyc
+[1.092s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/trpo_mpi/__init__.py to __init__.cpython-310.pyc
+[1.092s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg/models.py to models.cpython-310.pyc
+[1.092s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg/test_smoke.py to test_smoke.cpython-310.pyc
+[1.092s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg/ddpg_learner.py to ddpg_learner.cpython-310.pyc
+[1.092s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg/__init__.py to __init__.cpython-310.pyc
+[1.092s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg/memory.py to memory.cpython-310.pyc
+[1.093s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg/ddpg.py to ddpg.cpython-310.pyc
+[1.094s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ddpg/noise.py to noise.cpython-310.pyc
+[1.095s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail/gail-eval.py to gail-eval.cpython-310.pyc
+[1.095s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail/run_mujoco.py to run_mujoco.cpython-310.pyc
+[1.097s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail/dataset/mujoco_dset.py to mujoco_dset.cpython-310.pyc
+[1.097s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail/dataset/__init__.py to __init__.cpython-310.pyc
+[1.097s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail/mlp_policy.py to mlp_policy.cpython-310.pyc
+[1.098s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail/trpo_mpi.py to trpo_mpi.cpython-310.pyc
+[1.100s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail/statistics.py to statistics.cpython-310.pyc
+[1.100s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail/behavior_clone.py to behavior_clone.cpython-310.pyc
+[1.101s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail/__init__.py to __init__.cpython-310.pyc
+[1.101s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/gail/adversary.py to adversary.cpython-310.pyc
+[1.102s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acktr/utils.py to utils.cpython-310.pyc
+[1.102s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acktr/kfac_utils.py to kfac_utils.cpython-310.pyc
+[1.102s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acktr/defaults.py to defaults.cpython-310.pyc
+[1.103s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acktr/kfac.py to kfac.cpython-310.pyc
+[1.107s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acktr/acktr.py to acktr.cpython-310.pyc
+[1.109s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/acktr/__init__.py to __init__.cpython-310.pyc
+[1.109s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/a2c/utils.py to utils.cpython-310.pyc
+[1.110s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/a2c/a2c.py to a2c.cpython-310.pyc
+[1.111s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/a2c/runner.py to runner.cpython-310.pyc
+[1.112s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/a2c/__init__.py to __init__.cpython-310.pyc
+[1.112s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2/microbatched_model.py to microbatched_model.cpython-310.pyc
+[1.112s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2/model.py to model.cpython-310.pyc
+[1.113s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2/defaults.py to defaults.cpython-310.pyc
+[1.113s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2/runner.py to runner.cpython-310.pyc
+[1.114s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2/test_microbatches.py to test_microbatches.cpython-310.pyc
+[1.114s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2/ppo2.py to ppo2.cpython-310.pyc
+[1.115s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo2/__init__.py to __init__.cpython-310.pyc
+[1.115s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/run.py to run.cpython-310.pyc
+[1.116s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1/cnn_policy.py to cnn_policy.cpython-310.pyc
+[1.117s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1/run_mujoco.py to run_mujoco.cpython-310.pyc
+[1.117s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1/run_atari.py to run_atari.cpython-310.pyc
+[1.117s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1/run_robotics.py to run_robotics.cpython-310.pyc
+[1.117s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1/run_humanoid.py to run_humanoid.cpython-310.pyc
+[1.118s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1/mlp_policy.py to mlp_policy.cpython-310.pyc
+[1.118s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1/__init__.py to __init__.cpython-310.pyc
+[1.119s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/ppo1/pposgd_simple.py to pposgd_simple.cpython-310.pyc
+[1.120s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/results_plotter.py to results_plotter.cpython-310.pyc
+[1.121s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/bench/benchmarks.py to benchmarks.cpython-310.pyc
+[1.121s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/bench/test_monitor.py to test_monitor.cpython-310.pyc
+[1.122s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/bench/monitor.py to monitor.cpython-310.pyc
+[1.123s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/bench/__init__.py to __init__.cpython-310.pyc
+[1.123s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/logger.py to logger.cpython-310.pyc
+[1.125s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tf_util.py to tf_util.cpython-310.pyc
+[1.127s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tile_images.py to tile_images.cpython-310.pyc
+[1.127s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/console_util.py to console_util.cpython-310.pyc
+[1.128s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/models.py to models.cpython-310.pyc
+[1.129s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/running_mean_std.py to running_mean_std.cpython-310.pyc
+[1.130s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/policies.py to policies.cpython-310.pyc
+[1.131s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/dataset.py to dataset.cpython-310.pyc
+[1.131s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/retro_wrappers.py to retro_wrappers.cpython-310.pyc
+[1.133s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/test_env_after_learn.py to test_env_after_learn.cpython-310.pyc
+[1.133s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/test_schedules.py to test_schedules.cpython-310.pyc
+[1.133s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/test_cartpole.py to test_cartpole.cpython-310.pyc
+[1.133s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/test_mnist.py to test_mnist.cpython-310.pyc
+[1.134s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/test_segment_tree.py to test_segment_tree.cpython-310.pyc
+[1.134s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/test_fetchreach.py to test_fetchreach.cpython-310.pyc
+[1.134s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/util.py to util.cpython-310.pyc
+[1.135s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/test_tf_util.py to test_tf_util.cpython-310.pyc
+[1.135s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/envs/identity_env.py to identity_env.cpython-310.pyc
+[1.136s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/envs/fixed_sequence_env.py to fixed_sequence_env.cpython-310.pyc
+[1.136s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/envs/identity_env_test.py to identity_env_test.cpython-310.pyc
+[1.136s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/envs/mnist_env.py to mnist_env.cpython-310.pyc
+[1.137s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/envs/__init__.py to __init__.cpython-310.pyc
+[1.137s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/test_identity.py to test_identity.cpython-310.pyc
+[1.137s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/test_fixed_sequence.py to test_fixed_sequence.cpython-310.pyc
+[1.137s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/test_doc_examples.py to test_doc_examples.cpython-310.pyc
+[1.138s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/__init__.py to __init__.cpython-310.pyc
+[1.138s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/test_plot_util.py to test_plot_util.cpython-310.pyc
+[1.138s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/test_serialization.py to test_serialization.cpython-310.pyc
+[1.139s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/tests/test_with_mpi.py to test_with_mpi.cpython-310.pyc
+[1.139s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/schedules.py to schedules.cpython-310.pyc
+[1.139s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/math_util.py to math_util.cpython-310.pyc
+[1.140s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/misc_util.py to misc_util.cpython-310.pyc
+[1.140s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/cg.py to cg.cpython-310.pyc
+[1.141s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/test_mpi_util.py to test_mpi_util.cpython-310.pyc
+[1.141s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/mpi_adam.py to mpi_adam.cpython-310.pyc
+[1.142s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/input.py to input.cpython-310.pyc
+[1.142s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/runners.py to runners.cpython-310.pyc
+[1.142s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/distributions.py to distributions.cpython-310.pyc
+[1.144s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/cmd_util.py to cmd_util.cpython-310.pyc
+[1.145s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/mpi_moments.py to mpi_moments.cpython-310.pyc
+[1.146s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/mpi_running_mean_std.py to mpi_running_mean_std.cpython-310.pyc
+[1.146s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/mpi_fork.py to mpi_fork.cpython-310.pyc
+[1.147s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/__init__.py to __init__.cpython-310.pyc
+[1.147s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/atari_wrappers.py to atari_wrappers.cpython-310.pyc
+[1.148s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/segment_tree.py to segment_tree.cpython-310.pyc
+[1.149s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/wrappers.py to wrappers.cpython-310.pyc
+[1.149s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/mpi_adam_optimizer.py to mpi_adam_optimizer.cpython-310.pyc
+[1.150s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/plot_util.py to plot_util.cpython-310.pyc
+[1.151s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/mpi_util.py to mpi_util.cpython-310.pyc
+[1.152s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env/vec_normalize.py to vec_normalize.cpython-310.pyc
+[1.153s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env/vec_video_recorder.py to vec_video_recorder.cpython-310.pyc
+[1.153s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env/vec_monitor.py to vec_monitor.cpython-310.pyc
+[1.153s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env/vec_remove_dict_obs.py to vec_remove_dict_obs.cpython-310.pyc
+[1.153s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env/test_vec_env.py to test_vec_env.cpython-310.pyc
+[1.154s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env/util.py to util.cpython-310.pyc
+[1.155s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env/vec_env.py to vec_env.cpython-310.pyc
+[1.155s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env/shmem_vec_env.py to shmem_vec_env.cpython-310.pyc
+[1.156s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env/subproc_vec_env.py to subproc_vec_env.cpython-310.pyc
+[1.157s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env/vec_frame_stack.py to vec_frame_stack.cpython-310.pyc
+[1.158s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env/dummy_vec_env.py to dummy_vec_env.cpython-310.pyc
+[1.158s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env/test_video_recorder.py to test_video_recorder.cpython-310.pyc
+[1.158s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/common/vec_env/__init__.py to __init__.cpython-310.pyc
+[1.159s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/replay_buffer.py to replay_buffer.cpython-310.pyc
+[1.159s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/her.py to her.cpython-310.pyc
+[1.160s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/actor_critic.py to actor_critic.cpython-310.pyc
+[1.160s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/normalizer.py to normalizer.cpython-310.pyc
+[1.161s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/util.py to util.cpython-310.pyc
+[1.162s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/her_sampler.py to her_sampler.cpython-310.pyc
+[1.162s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/experiment/play.py to play.cpython-310.pyc
+[1.162s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/experiment/plot.py to plot.cpython-310.pyc
+[1.163s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/experiment/config.py to config.cpython-310.pyc
+[1.164s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/experiment/__init__.py to __init__.cpython-310.pyc
+[1.164s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/rollout.py to rollout.cpython-310.pyc
+[1.165s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/__init__.py to __init__.cpython-310.pyc
+[1.165s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/her/ddpg.py to ddpg.cpython-310.pyc
+[1.168s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/__init__.py to __init__.cpython-310.pyc
+[1.168s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/replay_buffer.py to replay_buffer.cpython-310.pyc
+[1.168s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/utils.py to utils.cpython-310.pyc
+[1.169s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/models.py to models.cpython-310.pyc
+[1.169s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/defaults.py to defaults.cpython-310.pyc
+[1.169s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments/train_cartpole.py to train_cartpole.cpython-310.pyc
+[1.169s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments/enjoy_cartpole.py to enjoy_cartpole.cpython-310.pyc
+[1.169s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments/enjoy_mountaincar.py to enjoy_mountaincar.cpython-310.pyc
+[1.170s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments/enjoy_pong.py to enjoy_pong.cpython-310.pyc
+[1.170s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments/train_mountaincar.py to train_mountaincar.cpython-310.pyc
+[1.170s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments/train_pong.py to train_pong.cpython-310.pyc
+[1.170s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments/custom_cartpole.py to custom_cartpole.cpython-310.pyc
+[1.171s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/experiments/__init__.py to __init__.cpython-310.pyc
+[1.171s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/__init__.py to __init__.cpython-310.pyc
+[1.171s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/deepq.py to deepq.cpython-310.pyc
+[1.173s] byte-compiling /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines/deepq/build_graph.py to build_graph.cpython-310.pyc
+[1.174s] running install_egg_info
+[1.176s] Copying ../../../build/baselines/baselines.egg-info to /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines-0.1.6-py3.10.egg-info
+[1.176s] running install_scripts
+[1.194s] writing list of installed files to '/home/sora/colcon_ws/build/baselines/install.log'
+[1.341s] Invoked command in '/home/sora/colcon_ws/src/CrowdNav_Prediction_AttnGraph-main/baselines' returned '0': PYTHONPATH=/home/sora/colcon_ws/build/baselines/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/baselines build --build-base /home/sora/colcon_ws/build/baselines/build install --record /home/sora/colcon_ws/build/baselines/install.log --single-version-externally-managed

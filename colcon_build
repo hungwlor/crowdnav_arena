@@ -1,0 +1,6 @@
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+source src/venv/bin/activate
+
+
+colcon build --symlink-install 

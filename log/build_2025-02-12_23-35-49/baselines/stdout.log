@@ -1,0 +1,14 @@
+running develop
+running egg_info
+creating baselines.egg-info
+writing baselines.egg-info/PKG-INFO
+writing dependency_links to baselines.egg-info/dependency_links.txt
+writing requirements to baselines.egg-info/requires.txt
+writing top-level names to baselines.egg-info/top_level.txt
+writing manifest file 'baselines.egg-info/SOURCES.txt'
+reading manifest file 'baselines.egg-info/SOURCES.txt'
+writing manifest file 'baselines.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/sora/colcon_ws/install/baselines/lib/python3.10/site-packages/baselines.egg-link (link to .)
+
+Installed /home/sora/colcon_ws/build/baselines

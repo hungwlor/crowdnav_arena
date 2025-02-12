@@ -1,0 +1,29 @@
+[0.346s] Invoking command in '/home/sora/colcon_ws/build/crowdnav_planners': /home/sora/.local/bin/cmake /home/sora/colcon_ws/src/crowdnav_planners -DCMAKE_INSTALL_PREFIX=/home/sora/colcon_ws/install/crowdnav_planners
+[0.365s] [33mCMake Warning (dev) in CMakeLists.txt:
+[0.365s]   No project() command is present.  The top-level CMakeLists.txt file must
+[0.365s]   contain a literal, direct call to the project() command.  Add a line of
+[0.365s]   code such as
+[0.365s] 
+[0.365s]     project(ProjectName)
+[0.365s] 
+[0.365s]   near the top of the file, but after cmake_minimum_required().
+[0.366s] 
+[0.366s]   CMake is pretending there is a "project(Project)" command on the first
+[0.366s]   line.
+[0.366s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.366s] [0m
+[0.421s] -- The C compiler identification is GNU 11.4.0
+[0.472s] -- The CXX compiler identification is GNU 11.4.0
+[0.481s] -- Detecting C compiler ABI info
+[0.520s] -- Detecting C compiler ABI info - done
+[0.526s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.526s] -- Detecting C compile features
+[0.527s] -- Detecting C compile features - done
+[0.529s] -- Detecting CXX compiler ABI info
+[0.569s] -- Detecting CXX compiler ABI info - done
+[0.576s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.576s] -- Detecting CXX compile features
+[0.576s] -- Detecting CXX compile features - done
+[0.576s] -- Configuring done
+[0.577s] -- Generating done
+[0.577s] -- Build files have been written to: /home/sora/colcon_ws/build/crowdnav_planners
