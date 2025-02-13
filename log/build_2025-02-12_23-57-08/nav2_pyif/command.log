@@ -1,1 +1,0 @@
-Invoking command in '/home/sora/colcon_ws/build/nav2_pyif': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sora/colcon_ws/install/crowdnav_base:/home/sora/colcon_ws/install/crowdnav_planner:/home/sora/colcon_ws/install/apf_python_example:/opt/ros/humble /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/nav2_pyif -- -j32 -l32

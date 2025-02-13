@@ -1,4 +1,0 @@
-[0.013s] Invoking command in '/home/sora/colcon_ws/build/nav2_pyif': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sora/colcon_ws/install/apf_python_example:/opt/ros/humble /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/nav2_pyif -- -j32 -l32
-[0.349s] [100%] Built target nav2_pyif
-[0.355s] Invoked command in '/home/sora/colcon_ws/build/nav2_pyif' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sora/colcon_ws/install/apf_python_example:/opt/ros/humble /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/nav2_pyif -- -j32 -l32
-[0.379s] Invoking command in '/home/sora/colcon_ws/build/nav2_pyif': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sora/colcon_ws/install/apf_python_example:/opt/ros/humble /home/sora/.local/bin/cmake --install /home/sora/colcon_ws/build/nav2_pyif

@@ -1,6 +1,6 @@
 import numpy as np
 from arguments import get_args
-
+import os 
 class BaseConfig(object):
     def __init__(self):
         pass

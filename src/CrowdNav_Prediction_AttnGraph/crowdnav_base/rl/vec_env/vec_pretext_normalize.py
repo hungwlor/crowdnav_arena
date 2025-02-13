@@ -40,7 +40,7 @@ class VecPretextNormalize(VecEnvWrapper):
         self.epsilon = epsilon
 
         # load and configure the prediction model
-        load_path = os.path.join(os.getcwd(), self.config.pred.model_dir)
+        load_path = os.path.join(os.getcwd(), 'src','CrowdNav_Prediction_AttnGraph','crowdnav_base', self.config.pred.model_dir)
         if not os.path.isdir(load_path):
             raise RuntimeError('The result directory was not found.')
         checkpoint_dir = os.path.join(load_path, 'checkpoint')

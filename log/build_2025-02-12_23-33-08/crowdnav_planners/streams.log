@@ -1,2 +1,0 @@
-[0.371s] Invoking command in '/home/sora/colcon_ws/build/crowdnav_planners': /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/crowdnav_planners -- -j32 -l32
-[0.400s] Invoked command in '/home/sora/colcon_ws/build/crowdnav_planners' returned '0': /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/crowdnav_planners -- -j32 -l32

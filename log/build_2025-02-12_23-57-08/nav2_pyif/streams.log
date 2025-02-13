@@ -1,7 +1,0 @@
-[0.139s] Invoking command in '/home/sora/colcon_ws/build/nav2_pyif': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sora/colcon_ws/install/crowdnav_base:/home/sora/colcon_ws/install/crowdnav_planner:/home/sora/colcon_ws/install/apf_python_example:/opt/ros/humble /home/sora/.local/bin/cmake --build /home/sora/colcon_ws/build/nav2_pyif -- -j32 -l32
-[0.174s] [ 20%] [32mBuilding CXX object CMakeFiles/nav2_pyif.dir/src/python_interface.cpp.o[0m
-[0.174s] [ 40%] [32mBuilding CXX object CMakeFiles/nav2_pyif.dir/src/geo_msgs.cpp.o[0m
-[0.175s] [ 60%] [32mBuilding CXX object CMakeFiles/nav2_pyif.dir/src/nav_msgs.cpp.o[0m
-[0.175s] [ 80%] [32mBuilding CXX object CMakeFiles/nav2_pyif.dir/src/std_msgs.cpp.o[0m
-[0.646s] [100%] [32m[1mLinking CXX shared library libnav2_pyif.so[0m
-[0.697s] [100%] Built target nav2_pyif

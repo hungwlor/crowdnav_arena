@@ -47,7 +47,7 @@ def main():
 		get_args = getattr(model_arguments, 'get_args')
 	except:
 		print('Failed to get get_args function from ', test_args.model_dir, '/arguments.py')
-		from arguments import get_args
+		from CrowdNav_Prediction_AttnGraph.crowdnav_base.arguments import get_args
 
 	algo_args = get_args()
 

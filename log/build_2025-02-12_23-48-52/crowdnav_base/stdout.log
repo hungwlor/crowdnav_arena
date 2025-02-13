@@ -1,9 +1,0 @@
-running develop
-running egg_info
-creating crowdnav_base.egg-info
-writing crowdnav_base.egg-info/PKG-INFO
-writing dependency_links to crowdnav_base.egg-info/dependency_links.txt
-writing entry points to crowdnav_base.egg-info/entry_points.txt
-writing requirements to crowdnav_base.egg-info/requires.txt
-writing top-level names to crowdnav_base.egg-info/top_level.txt
-writing manifest file 'crowdnav_base.egg-info/SOURCES.txt'

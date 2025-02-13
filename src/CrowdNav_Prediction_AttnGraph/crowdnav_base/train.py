@@ -26,7 +26,7 @@ def main():
 	"""
 	# read arguments
 	algo_args = get_args()
-
+	dir = os.path.dirname(os.path.abspath(__file__))
 	# create a directory for saving the logs and weights
 	if not os.path.exists(algo_args.output_dir):
 		os.makedirs(algo_args.output_dir)
@@ -37,9 +37,9 @@ def main():
 	save_config_dir = os.path.join(algo_args.output_dir, 'configs')
 	if not os.path.exists(save_config_dir):
 		os.makedirs(save_config_dir)
-	shutil.copy('crowd_nav/configs/config.py', save_config_dir)
-	shutil.copy('crowd_nav/configs/__init__.py', save_config_dir)
-	shutil.copy('arguments.py', algo_args.output_dir)
+	shutil.copy(os.path.join(dir, 'crowd_nav/configs/config.py'), save_config_dir)
+	shutil.copy(os.path.join(dir,'crowd_nav/configs/__init__.py'), save_config_dir)
+	shutil.copy(os.path.join(dir,'arguments.py'), algo_args.output_dir)
 
 
 	env_config = config = Config()
