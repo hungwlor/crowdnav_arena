@@ -5,3 +5,4 @@ src/venv
 src/nav2_pyif
 src/Python-RVO2/
 src/baselines/
+src/slam_toolbox/

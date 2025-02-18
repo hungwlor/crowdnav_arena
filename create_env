@@ -1,16 +1,17 @@
 export WS_DIR=$PWD
-virtualenv --python='/usr/bin/python3.9' src/.venv
+virtualenv --python='/usr/bin/python3.10' src/.venv
 source src/.venv/bin/activate
+python -m pip install catkin_pkg lark empy==3.3.4
 python -m pip install torch==1.12.1 --index-url https://download.pytorch.org/whl/cu116
 cd src/
 git clone https://github.com/openai/baselines.git
 git clone https://github.com/sybrenstuvel/Python-RVO2
 git clone https://github.com/DanelLepp/nav2_pyif
+git clone https://github.com/SteveMacenski/slam_toolbox.git
 cd $WS_DIR
-python -m pip install catkin_pkg
 python -m pip install -r requirements.txt
 python -m pip install -e src/baselines/
 cd src/Python-RVO2/
-python setup.py build install
+python setup.py build install 
 cd $WS_DIR
 touch src/.venv/COLCON_IGNORE

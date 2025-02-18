@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+import sys
+print(sys.executable)
+print(sys.version)
 import os
 import shutil
 import time

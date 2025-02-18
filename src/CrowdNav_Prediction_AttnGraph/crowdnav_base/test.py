@@ -3,6 +3,7 @@ import argparse
 import os
 import sys
 from matplotlib import pyplot as plt
+import matplotlib
 import torch
 import torch.nn as nn
 
@@ -20,7 +21,7 @@ def main():
 	# the following parameters will be determined for each test run
 	parser = argparse.ArgumentParser('Parse configuration file')
 	# the model directory that we are testing
-	parser.add_argument('--model_dir', type=str, default='trained_models/GST_predictor_rand')
+	parser.add_argument('--model_dir', type=str, default='/home/sora/colcon_ws/src/CrowdNav_Prediction_AttnGraph/crowdnav_base/trained_models/GST_predictor_rand')
 	# render the environment or not
 	parser.add_argument('--visualize', default=True, action='store_true')
 	# if -1, it will run 500 different cases; if >=0, it will run the specified test case repeatedly
@@ -47,7 +48,7 @@ def main():
 		get_args = getattr(model_arguments, 'get_args')
 	except:
 		print('Failed to get get_args function from ', test_args.model_dir, '/arguments.py')
-		from CrowdNav_Prediction_AttnGraph.crowdnav_base.arguments import get_args
+		from arguments import get_args
 
 	algo_args = get_args()
 
