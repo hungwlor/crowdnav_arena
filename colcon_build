@@ -3,7 +3,7 @@ export ROS_DOMAIN_ID=1
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ros/humble/lib/
 source /opt/ros/humble/setup.bash
-source src/.venv/bin/activate
+# source src/.venv/bin/activate
 
 colcon build --symlink-install --base-paths src/  --cmake-args -DPython3_ROOT_DIR="/home/sora/colcon_ws/src/.venv/bin/python3.9" -DBUILD_TESTING=OFF
 

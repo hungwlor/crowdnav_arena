@@ -24,7 +24,7 @@ import lzf
 HAS_SENSOR_MSGS = True
 try:
     from sensor_msgs.msg import PointField
-    import numpy_pc2  # needs sensor_msgs
+    import ros2_numpy.point_cloud2 as pcl # needs sensor_msgs
 except ImportError:
     HAS_SENSOR_MSGS = False
 
@@ -723,7 +723,7 @@ class PointCloud(object):
         if not HAS_SENSOR_MSGS:
             raise Exception('ROS sensor_msgs not found')
         # TODO is there some metadata we want to attach?
-        return numpy_pc2.array_to_pointcloud2(self.pc_data)
+        return pcl.array_to_pointcloud2(self.pc_data)
 
     @staticmethod
     def from_path(fname):
@@ -791,7 +791,7 @@ class PointCloud(object):
             if field.count > 1:
                 warnings.warn('fields with count > 1 are not well tested')
             md['count'].append(field.count)
-        pc_array = numpy_pc2.pointcloud2_to_array(msg)
+        pc_array = pcl.pointcloud2_to_array(msg)
         pc_data = pc_array.reshape(-1)
         md['height'], md['width'] = pc_array.shape
         md['points'] = len(pc_data)

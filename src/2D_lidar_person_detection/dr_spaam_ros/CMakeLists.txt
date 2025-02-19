@@ -1,12 +1,9 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(dr_spaam_ros)
 
-find_package(catkin REQUIRED
-  COMPONENTS
-)
+find_package(ament_cmake REQUIRED)
+find_package(rclpy REQUIRED)
 
-catkin_package()
+ament_python_install_package(${PROJECT_NAME})
 
-catkin_python_setup()
-
-
+ament_package()

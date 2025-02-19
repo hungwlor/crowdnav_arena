@@ -1,0 +1,4 @@
+dr_spaam.egg-info/PKG-INFO
+dr_spaam.egg-info/SOURCES.txt
+dr_spaam.egg-info/dependency_links.txt
+dr_spaam.egg-info/top_level.txt

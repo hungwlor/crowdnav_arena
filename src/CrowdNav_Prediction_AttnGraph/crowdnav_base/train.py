@@ -11,7 +11,8 @@ import torch
 import torch.nn as nn
 import pandas as pd
 import matplotlib.pyplot as plt
-
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent))
 from rl import ppo
 from rl.networks import network_utils
 from arguments import get_args

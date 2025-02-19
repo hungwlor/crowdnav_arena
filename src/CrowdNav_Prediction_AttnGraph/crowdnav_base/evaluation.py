@@ -71,6 +71,7 @@ def evaluate(actor_critic, eval_envs, num_processes, device, test_size, logging,
                         deterministic=True)
             else:
                 action = torch.zeros([1, 2], device=device)
+            # print(action)
             if not done:
                 global_time = baseEnv.global_time
 

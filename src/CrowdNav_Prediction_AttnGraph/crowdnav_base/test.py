@@ -7,6 +7,9 @@ import matplotlib
 import torch
 import torch.nn as nn
 
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent))
+print(Path(__file__).parent)
 from rl.networks.envs import make_vec_envs
 from evaluation import evaluate
 from rl.networks.model import Policy

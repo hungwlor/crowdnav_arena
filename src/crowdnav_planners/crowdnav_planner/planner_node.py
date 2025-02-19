@@ -7,7 +7,7 @@ import numpy as np
 import os
 import sys
 import pathlib
-import crownav_base.model.Policy as Policy
+import crownav_base.model.policy as Policy
 # import crownav_base.rl.networks.model.Policy as Policy
 import torch
 import numpy as np
