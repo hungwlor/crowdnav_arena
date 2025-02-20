@@ -1,8 +1,13 @@
 export FASTRTPS_DEFAULT_PROFILES_FILE=~/.ros/fastdds.xml
-export ROS_DOMAIN_ID=1
+export ROS_DOMAIN_ID=30
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ros/humble/lib/
+export TURTLEBOT3_MODEL=waffle
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/humble/share/turtlebot3_gazebo/models
+export LIBGL_ALWAYS_SOFTWARE=1
+
 source /opt/ros/humble/setup.bash
+source /usr/share/gazebo/setup.sh
 # source src/.venv/bin/activate
 
 colcon build --symlink-install --base-paths src/  --cmake-args -DPython3_ROOT_DIR="/home/sora/colcon_ws/src/.venv/bin/python3.9" -DBUILD_TESTING=OFF

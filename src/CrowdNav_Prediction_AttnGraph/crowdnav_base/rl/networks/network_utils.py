@@ -3,7 +3,7 @@ import os
 
 import torch.nn as nn
 
-from rl.networks.envs import VecNormalize
+from .envs import VecNormalize
 
 
 # Get a render function

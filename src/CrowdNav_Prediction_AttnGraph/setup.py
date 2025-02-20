@@ -7,7 +7,7 @@ package_name = 'crowdnav_base'
 setup(
     name=package_name,
     version='0.0.1',
-    packages=[package_name],
+    packages=find_packages(),
     data_files=[
     ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
     ('share/' + package_name, glob('rl/networks/*.py')),

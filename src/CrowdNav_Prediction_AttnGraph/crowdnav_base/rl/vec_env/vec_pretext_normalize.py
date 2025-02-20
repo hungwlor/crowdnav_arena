@@ -7,7 +7,10 @@ from collections import deque
 
 import copy
 import pickle
-
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent.parent))
+print(Path(__file__).parent.parent.parent.parent)
 from gst_updated.src.gumbel_social_transformer.temperature_scheduler import Temp_Scheduler
 from gst_updated.scripts.wrapper.crowd_nav_interface_parallel import CrowdNavPredInterfaceMultiEnv
 

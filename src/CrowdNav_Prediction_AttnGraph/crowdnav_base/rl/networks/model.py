@@ -1,8 +1,11 @@
 import torch
 import torch.nn as nn
 
-
-from rl.networks.distributions import Bernoulli, Categorical, DiagGaussian
+import sys
+from pathlib import Path
+# sys.path.append(str(Path(__file__).parent.parent))
+# print(Path(__file__).parent.parent)
+from .distributions import Bernoulli, Categorical, DiagGaussian
 from .srnn_model import SRNN
 from .selfAttn_srnn_temp_node import selfAttn_merge_SRNN
 
