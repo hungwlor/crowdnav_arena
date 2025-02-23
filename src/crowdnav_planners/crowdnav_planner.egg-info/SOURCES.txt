@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+crowdnav_planner/__init__.py
+crowdnav_planner/crowdnav_controller.py
+crowdnav_planner.egg-info/PKG-INFO
+crowdnav_planner.egg-info/SOURCES.txt
+crowdnav_planner.egg-info/dependency_links.txt
+crowdnav_planner.egg-info/entry_points.txt
+crowdnav_planner.egg-info/requires.txt
+crowdnav_planner.egg-info/top_level.txt
+crowdnav_planner.egg-info/zip-safe

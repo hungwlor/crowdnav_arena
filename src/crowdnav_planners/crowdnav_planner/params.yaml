@@ -20,10 +20,10 @@ controller_server:
       stateful: True
     FollowPath:
       plugin: "nav2_pyif_controller::PYIFController"
-      python_module: "crowdnav_planners.crowdnav_controller"
+      python_module: "crowdnav_planner.crowdnav_controller"
       python_delegates: 
-        set_plan: "set_plan_override"
-        set_speed_limit: "set_speed_limit_override"
+        set_plan: "setPath"
+        set_speed_limit: "setSpeedLimit"
         compute_velocity_commands: "compute_velocity_commands_override"
 
 amcl:

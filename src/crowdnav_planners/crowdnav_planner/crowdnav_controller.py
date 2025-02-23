@@ -1,4 +1,6 @@
-from geometry_msgs.msg import TwistStamped
+#! /usr/bin/env python3
+
+from geometry_msgs.msg import TwistStamped, PoseStamped
 import torch
 import torch.nn as nn
 import os
@@ -6,6 +8,7 @@ import sys
 from pathlib import Path
 from importlib import import_module
 from rclpy.clock import Clock
+from rclpy.node import Node
 
 # Import your original modules
 from crowdnav_base.rl.networks.envs import make_vec_envs
@@ -14,10 +17,25 @@ from crowdnav_base.crowd_sim import *
 
 # Global variable to hold our initialized model data
 _model_data = None
+goal_pose = PoseStamped()
+position_all = []
 
 # Configuration constants (adjust these as needed)
 MODEL_DIR = '/home/sora/colcon_ws/src/CrowdNav_Prediction_AttnGraph/crowdnav_base/trained_models/GST_predictor_rand'
 TEST_MODEL = '41665.pt'
+
+def handleGlobalPlan(global_path):
+    position_x = []
+    position_y = []
+    i=0
+    while(i <= len(global_path.poses)-1):
+        position_x.append(global_path.poses[i].pose.position.x)
+        position_y.append(global_path.poses[i].pose.position.y)
+        i=i+1
+    position_all = [list(double) for double in zip(position_x,position_y)]
+    
+    return position_all
+
 
 def initialize_model():
     """
@@ -66,6 +84,7 @@ def initialize_model():
     eval_dir = os.path.join(MODEL_DIR, 'eval')
     if not os.path.exists(eval_dir):
         os.mkdir(eval_dir)
+        
     # Adjust environment config as necessary
     env_config = config
     env_config.render_traj = False
@@ -115,15 +134,23 @@ def compute_velocity_commands_override(occupancy_grid, pose, twist):
     # ----- Convert sensor data to a model observation -----
     # NOTE: You must implement your own conversion logic here based on your sensor inputs.
     # The following is a placeholder that simply resets the environment.
-    observation = envs.reset()
+    observation = {
+        'robot_node': torch.tensor(pose).reshape(1,1,7).to(device),
+        'spaital_edges': torch.zeros(1, 20, 12, device=device),
+        'temporal_edges': torch.zeros(1, 1, 2, device=device),
+        'visible_masks': torch.zeros(1, 20, device=device),
+        'detected_human_num': torch.tensor([1,1], device=device),
+    }
 
     # ----- Compute the action using the loaded policy -----
     with torch.no_grad():
         # The act() function is expected to return (value, action, log_prob, hidden_state)
         value, action, _, _ = actor_critic.act(observation, None, None, deterministic=True)
     
+    # raise ValueError(action)
     # Create a ROS2 TwistStamped message with the action results
     cmd_vel = TwistStamped()
+    cmd_vel.header = pose.header
     clock = Clock()
     cmd_vel.header.stamp = clock.now().to_msg()
     cmd_vel.header.frame_id = "base_link"  # Adjust frame_id if needed
@@ -135,31 +162,17 @@ def compute_velocity_commands_override(occupancy_grid, pose, twist):
     cmd_vel.twist.linear.x = float(action[0]) if action.nelement() > 0 else 0.0
     cmd_vel.twist.angular.z = float(action[1]) if action.nelement() > 1 else 0.0
 
+    
+
+    print(cmd_vel)
     return cmd_vel
 
-def set_plan_override(global_plan):
-    """
-    Overrides the global plan.
-    
-    Parameters:
-      global_plan - the current global plan.
-      
-    Returns:
-      None
-    """
-    # Integration with your own code here
+def setPath(global_plan):
+    global goal_pose 
+    goal_pose = global_plan.poses[-1]
+    global position_all
+    position_all = handleGlobalPlan(global_plan)
     return
 
-def set_speed_limit_override(speed_limit, is_percentage):
-    """
-    Overrides the speed limit settings.
-    
-    Parameters:
-      speed_limit  - the speed limit value.
-      is_percentage- flag indicating if the speed limit is a percentage.
-      
-    Returns:
-      None
-    """
-    # Integration with your own code here
+def setSpeedLimit(speed_limit, is_percentage):
     return

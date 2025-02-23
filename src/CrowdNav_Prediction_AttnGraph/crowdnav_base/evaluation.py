@@ -58,7 +58,8 @@ def evaluate(actor_critic, eval_envs, num_processes, device, test_size, logging,
         too_close = 0.
         last_pos = obs['robot_node'][0, 0, :2].cpu().numpy()
 
-
+        for key, value in obs.items():
+            print(key, value.shape)
         while not done:
             stepCounter = stepCounter + 1
             if config.robot.policy not in ['orca', 'social_force']:
