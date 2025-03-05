@@ -24,7 +24,9 @@ setup(
     entry_points={
         'console_scripts': [
             'train = crowdnav_base.train:main',
-            'test = crowdnav_base.test:main'
+            'test = crowdnav_base.test:main',
+            'test_env = crowdnav_base.test_env:main',
+            'env2 = crowdnav_base.test_env2:main',
         ],
     },
 )

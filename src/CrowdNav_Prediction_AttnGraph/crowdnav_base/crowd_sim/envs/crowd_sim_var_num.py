@@ -51,7 +51,7 @@ class CrowdSimVarNum(CrowdSim):
         # whether each human is visible to robot (ordered by human ID, should not be sorted)
         d['visible_masks'] = gym.spaces.Box(low=-np.inf, high=np.inf,
                                             shape=(self.max_human_num,),
-                                            dtype=np.bool)
+                                            dtype=np.bool_)
         self.observation_space=gym.spaces.Dict(d)
 
         high = np.inf * np.ones([2, ])

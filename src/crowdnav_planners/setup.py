@@ -15,6 +15,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'test_env=crowdnav_planner.test_env:main',
         ],
     },
 )

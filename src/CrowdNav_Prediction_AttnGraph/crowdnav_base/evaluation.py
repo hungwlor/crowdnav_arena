@@ -57,9 +57,14 @@ def evaluate(actor_critic, eval_envs, num_processes, device, test_size, logging,
         path_len = 0.
         too_close = 0.
         last_pos = obs['robot_node'][0, 0, :2].cpu().numpy()
-
+        
+        print(obs['robot_node'])
         for key, value in obs.items():
-            print(key, value.shape)
+            print(key, type(value),value.min(),value.max(),value.shape)
+        # print(type(eval_recurrent_hidden_states),eval_recurrent_hidden_states)
+        for key, value in eval_recurrent_hidden_states.items():
+            print(key, type(value),value.min(),value.max(),value.shape)
+        print(type(eval_masks),eval_masks,eval_masks.shape)
         while not done:
             stepCounter = stepCounter + 1
             if config.robot.policy not in ['orca', 'social_force']:

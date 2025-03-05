@@ -9,9 +9,14 @@ from pathlib import Path
 from importlib import import_module
 from rclpy.clock import Clock
 from rclpy.node import Node
+import rclpy.logging
+import rclpy
+import importlib.util
+from gym.spaces import Box
+from collections import OrderedDict
+import logging
 
 # Import your original modules
-from crowdnav_base.rl.networks.envs import make_vec_envs
 from crowdnav_base.rl.networks.model import Policy
 from crowdnav_base.crowd_sim import *
 
@@ -19,22 +24,21 @@ from crowdnav_base.crowd_sim import *
 _model_data = None
 goal_pose = PoseStamped()
 position_all = []
-
+logger = rclpy.logging.get_logger('controller_server')
 # Configuration constants (adjust these as needed)
 MODEL_DIR = '/home/sora/colcon_ws/src/CrowdNav_Prediction_AttnGraph/crowdnav_base/trained_models/GST_predictor_rand'
 TEST_MODEL = '41665.pt'
 
-def handleGlobalPlan(global_path):
-    position_x = []
-    position_y = []
-    i=0
-    while(i <= len(global_path.poses)-1):
-        position_x.append(global_path.poses[i].pose.position.x)
-        position_y.append(global_path.poses[i].pose.position.y)
-        i=i+1
-    position_all = [list(double) for double in zip(position_x,position_y)]
-    
-    return position_all
+def rand_in_range(shape, low, high, device):
+    return low + (high - low) * torch.rand(shape, device=device)
+
+def load_module_from_file(module_name, file_path):
+    spec = importlib.util.spec_from_file_location(module_name, file_path)
+    if spec is None:
+        raise ImportError(f"Could not load spec for {module_name} from {file_path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 def initialize_model():
@@ -44,28 +48,37 @@ def initialize_model():
     """
     # Remove trailing slash if present
     model_dir_temp = MODEL_DIR.rstrip('/')
-    
-    # Import model arguments
+    # logger.info(f'{model_dir_temp}')
+    arguments_path = os.path.join(model_dir_temp, "arguments.py")
     try:
-        model_dir_string = model_dir_temp.replace('/', '.') + '.arguments'
-        model_arguments = import_module(model_dir_string)
-        get_args = getattr(model_arguments, 'get_args')
+        if os.path.exists(arguments_path):
+            model_arguments = load_module_from_file("arguments", arguments_path)
+            get_args = getattr(model_arguments, "get_args")
+            logger.info('arguments')
+        else:
+            from arguments import get_args
     except Exception as e:
-        print('Failed to load get_args from', MODEL_DIR + '/arguments.py')
-        from crowdnav_base.arguments import get_args
-    
+        print("Failed to load get_args from", arguments_path, ":", e)
+        from arguments import get_args
+
     algo_args = get_args()
-    
-    # Import configuration
+
+	# import config class from saved directory
+	# if not found, import from the default directory
+    configs_path = os.path.join(model_dir_temp, "configs/config.py")
     try:
-        model_dir_string = model_dir_temp.replace('/', '.') + '.configs.config'
-        model_arguments = import_module(model_dir_string)
-        Config = getattr(model_arguments, 'Config')
+        if os.path.exists(configs_path):
+            model_arguments = load_module_from_file("config", configs_path)
+            Config = getattr(model_arguments, "Config")
+            logger.info('config')
+        else:
+            from crowd_nav.configs.config import Config
     except Exception as e:
-        print('Failed to load Config from', MODEL_DIR)
-        from crowdnav_base.crowd_nav.configs.config import Config
-    config = Config()
-    
+        print("Failed to load Config from", configs_path, ":", e)
+        from crowd_nav.configs.config import Config
+
+    env_config = config = Config()
+
     # Configure torch and random seeds
     torch.manual_seed(algo_args.seed)
     torch.cuda.manual_seed_all(algo_args.seed)
@@ -77,10 +90,12 @@ def initialize_model():
             torch.backends.cudnn.benchmark = True
             torch.backends.cudnn.deterministic = False
     torch.set_num_threads(1)
-    device = torch.device("cuda" if algo_args.cuda else "cpu")
+    device = "cpu"
     
+    logger.info('dkmm torch')
     # Create the evaluation environment
     env_name = algo_args.env_name
+    logger.info(f'{env_name}')
     eval_dir = os.path.join(MODEL_DIR, 'eval')
     if not os.path.exists(eval_dir):
         os.mkdir(eval_dir)
@@ -91,27 +106,46 @@ def initialize_model():
     env_config.save_slides = False
     env_config.save_path = os.path.join(MODEL_DIR, 'social_eval', TEST_MODEL[:-3])
     ax = None
-    
-    envs = make_vec_envs(env_name, algo_args.seed, 1,
-                         algo_args.gamma, eval_dir, device,
-                         allow_early_resets=True, config=env_config, ax=ax,
-                         test_case=-1, pretext_wrapper=config.env.use_wrapper)
-    
+    logger.info('?')
     # Create and load the policy network unless using a default rule-based policy
-    if config.robot.policy not in ['orca', 'social_force']:
-        actor_critic = Policy(
-            envs.observation_space.spaces,
-            envs.action_space,
-            base_kwargs=algo_args,
-            base=config.robot.policy)
-        load_path = os.path.join(MODEL_DIR, 'checkpoints', TEST_MODEL)
-        actor_critic.load_state_dict(torch.load(load_path, map_location=device))
-        actor_critic.base.nenv = 1
-        actor_critic = nn.DataParallel(actor_critic).to(device)
-    else:
-        actor_critic = None
+    low = -2**63
+    high = 2**63-2
+    try:
+        if config.robot.policy not in ['orca', 'social_force']:
+            actor_critic = Policy(
+                OrderedDict([('detected_human_num', Box(low,high,shape=(1,))), ('robot_node', Box(low,high,shape=(1, 7))), ('spatial_edges', Box(low,high,shape=(20, 12))), ('temporal_edges', Box(low,high,shape=(1, 2))), ('visible_masks', Box(low,high,shape=(20,)))]),
+                Box(low,high,shape=(2,)),
+                base_kwargs=algo_args,
+                base=config.robot.policy)
+            logger.info('policy')
+            load_path = os.path.join(MODEL_DIR, 'checkpoints', TEST_MODEL)
+            actor_critic.load_state_dict(torch.load(load_path, map_location=device))
+            actor_critic.base.nenv = 1
+        else:
+            actor_critic = None
+    except Exception as e:
+        logger.info(f'{e}')
+    logger.info('model')
+    return actor_critic, None, device, config
 
-    return actor_critic, envs, device, config, algo_args
+actor_critic,_,device,config = initialize_model()
+observation = {
+'robot_node': rand_in_range((1, 1, 7), -6, 6, device),
+'spatial_edges': rand_in_range((1, 20, 12), -6, 15, device),
+'temporal_edges': rand_in_range((1, 1, 2), 0, 0, device),
+'visible_masks': torch.randint(0, 2, (1, 20), device=device, dtype=torch.bool),
+'detected_human_num': torch.tensor([[5]], device=device),
+}
+
+eval_recurrent_hidden_states = {
+'human_node_rnn': rand_in_range((1, 1, 128), -1, 1, device),
+'human_human_edge_rnn': rand_in_range((1, 21, 256), 0, 0, device),
+}
+
+eval_masks = torch.zeros((1, 1), device=device)
+with torch.no_grad():
+    value, action, _, _ = actor_critic.act(observation, eval_recurrent_hidden_states, eval_masks, deterministic=True)
+# logger.info(f"Action: {action}")
 
 def compute_velocity_commands_override(occupancy_grid, pose, twist):
     """
@@ -124,48 +158,79 @@ def compute_velocity_commands_override(occupancy_grid, pose, twist):
       
     Returns:
       cmd_vel        - a geometry_msgs.msg.TwistStamped message containing the computed commands.
-    """
-    global _model_data
-    if _model_data is None:
-        _model_data = initialize_model()
-    
-    actor_critic, envs, device, config, algo_args = _model_data
+    """    # logger.info('dkmm')
 
+    logger.info('dkmm')
     # ----- Convert sensor data to a model observation -----
     # NOTE: You must implement your own conversion logic here based on your sensor inputs.
     # The following is a placeholder that simply resets the environment.
     observation = {
-        'robot_node': torch.tensor(pose).reshape(1,1,7).to(device),
-        'spaital_edges': torch.zeros(1, 20, 12, device=device),
-        'temporal_edges': torch.zeros(1, 1, 2, device=device),
-        'visible_masks': torch.zeros(1, 20, device=device),
-        'detected_human_num': torch.tensor([1,1], device=device),
+    'robot_node': rand_in_range((1, 1, 7), -6, 6, device),
+    'spatial_edges': rand_in_range((1, 20, 12), -6, 15, device),
+    'temporal_edges': rand_in_range((1, 1, 2), 0, 0, device),
+    'visible_masks': torch.randint(0, 2, (1, 20), device=device, dtype=torch.bool),
+    'detected_human_num': torch.tensor([[5]], device=device),
     }
 
-    # ----- Compute the action using the loaded policy -----
-    with torch.no_grad():
-        # The act() function is expected to return (value, action, log_prob, hidden_state)
-        value, action, _, _ = actor_critic.act(observation, None, None, deterministic=True)
-    
-    # raise ValueError(action)
-    # Create a ROS2 TwistStamped message with the action results
+    eval_recurrent_hidden_states = {
+    'human_node_rnn': rand_in_range((1, 1, 128), -1, 1, device),
+    'human_human_edge_rnn': rand_in_range((1, 21, 256), 0, 0, device),
+    }
+
+    eval_masks = torch.zeros((1, 1), device=device)
+    logger.info(f'{type(actor_critic)}')
+    logger.info(f'obs: {observation}')
+    try:
+        logger.info('start')
+        value,action,_,_ = actor_critic.act(observation,eval_recurrent_hidden_states,eval_masks,deterministic=True)
+    except Exception as e:
+        logger.warning(f"Error in model prediction: {e}")
     cmd_vel = TwistStamped()
     cmd_vel.header = pose.header
-    clock = Clock()
-    cmd_vel.header.stamp = clock.now().to_msg()
-    cmd_vel.header.frame_id = "base_link"  # Adjust frame_id if needed
-    
+    cmd_vel.twist.linear.x = 2.0
+    cmd_vel.twist.angular.z = 0.0
+    # return cmd_vel
+    # try:
+    #     logging.warning('start')
+    #     with torch.no_grad():
+    #         value, action, _, _ = actor_critic.act(observation, eval_recurrent_hidden_states, eval_masks, deterministic=True)
+    #     logger.info(f"Action: {action}")
+    #     logging.warning(f"Action: {action}")
+    cmd_vel.header = pose.header
+    logger.info(f'{action}'
+    )
+    logger.info(f'{action[0][0].numpy()}')
+    logger.info(f'{action[0][1].numpy()}')
+    linear_x = action[0][0].numpy()
+    angular_z = action[0][1].numpy()    
+    try:
+        cmd_vel.twist.linear.x = float(linear_x)
+        cmd_vel.twist.angular.z = float(angular_z)
+    except Exception as e:
+        logger.error(f"Error in model prediction: {e}")
     # Assuming the action has at least two components: [linear_velocity, angular_velocity]
     # If action is batched, select the first sample.
-    if action.dim() > 1:
-        action = action[0]
-    cmd_vel.twist.linear.x = float(action[0]) if action.nelement() > 0 else 0.0
-    cmd_vel.twist.angular.z = float(action[1]) if action.nelement() > 1 else 0.0
+    # logger.info(f'{cmd_vel}')
+    return cmd_vel
+    # except Exception as e:
+    #     logger.error(f"Error in model prediction: {e}")
+    #     return cmd_vel
 
+    # raise ValueError(action)
+    # Create a ROS2 TwistStamped message with the action results
     
 
-    print(cmd_vel)
-    return cmd_vel
+def handleGlobalPlan(global_path):
+    position_x = []
+    position_y = []
+    i=0
+    while(i <= len(global_path.poses)-1):
+        position_x.append(global_path.poses[i].pose.position.x)
+        position_y.append(global_path.poses[i].pose.position.y)
+        i=i+1
+    position_all = [list(double) for double in zip(position_x,position_y)]
+    
+    return position_all
 
 def setPath(global_plan):
     global goal_pose 

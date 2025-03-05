@@ -155,7 +155,7 @@ class CrowdSim(gym.Env):
 
         self.predict_steps = config.sim.predict_steps
         self.human_num_range = config.sim.human_num_range
-        assert self.human_num > self.human_num_range
+        assert self.human_num >= self.human_num_range
 
         self.max_human_num = self.human_num + self.human_num_range
         self.min_human_num = self.human_num - self.human_num_range

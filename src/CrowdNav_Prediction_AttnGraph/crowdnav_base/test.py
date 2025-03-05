@@ -15,7 +15,15 @@ from evaluation import evaluate
 from rl.networks.model import Policy
 
 from crowd_sim import *
+import importlib.util
 
+def load_module_from_file(module_name, file_path):
+    spec = importlib.util.spec_from_file_location(module_name, file_path)
+    if spec is None:
+        raise ImportError(f"Could not load spec for {module_name} from {file_path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 def main():
 	"""
@@ -24,13 +32,13 @@ def main():
 	# the following parameters will be determined for each test run
 	parser = argparse.ArgumentParser('Parse configuration file')
 	# the model directory that we are testing
-	parser.add_argument('--model_dir', type=str, default='/home/sora/colcon_ws/src/CrowdNav_Prediction_AttnGraph/crowdnav_base/trained_models/GST_predictor_rand')
+	parser.add_argument('--model_dir', type=str, default='/home/sora/colcon_ws/src/CrowdNav_Prediction_AttnGraph/crowdnav_base/trained_models/GST_predictor_non_rand')
 	# render the environment or not
 	parser.add_argument('--visualize', default=True, action='store_true')
 	# if -1, it will run 500 different cases; if >=0, it will run the specified test case repeatedly
 	parser.add_argument('--test_case', type=int, default=-1)
 	# model weight file you want to test
-	parser.add_argument('--test_model', type=str, default='41665.pt')
+	parser.add_argument('--test_model', type=str, default='41200.pt')
 	# whether to save trajectories of episodes
 	parser.add_argument('--render_traj', default=False, action='store_true')
 	# whether to save slide show of episodes
@@ -41,31 +49,45 @@ def main():
 
 	from importlib import import_module
 	model_dir_temp = test_args.model_dir
+	print(model_dir_temp)
 	if model_dir_temp.endswith('/'):
 		model_dir_temp = model_dir_temp[:-1]
 	# import arguments.py from saved directory
 	# if not found, import from the default directory
+	
+	# model_dir_string = model_dir_temp.replace('/', '.') + '.arguments'
+	# # print(model_dir_string)
+	# model_arguments = import_module(model_dir_string,package='crowdnav_base')
+	# get_args = getattr(model_arguments, 'get_args')
+	# print('Failed to get get_args function from ', test_args.model_dir, '/arguments.py')
+	# from arguments import get_args
+	# Load arguments.py from the model directory if it exists, otherwise use the default
+	arguments_path = os.path.join(model_dir_temp, "arguments.py")
 	try:
-		model_dir_string = model_dir_temp.replace('/', '.') + '.arguments'
-		model_arguments = import_module(model_dir_string)
-		get_args = getattr(model_arguments, 'get_args')
-	except:
-		print('Failed to get get_args function from ', test_args.model_dir, '/arguments.py')
+		if os.path.exists(arguments_path):
+			model_arguments = load_module_from_file("arguments", arguments_path)
+			get_args = getattr(model_arguments, "get_args")
+		else:
+			from arguments import get_args
+	except Exception as e:
+		print("Failed to load get_args from", arguments_path, ":", e)
 		from arguments import get_args
 
 	algo_args = get_args()
 
 	# import config class from saved directory
 	# if not found, import from the default directory
-
+	configs_path = os.path.join(model_dir_temp, "configs/config.py")
 	try:
-		model_dir_string = model_dir_temp.replace('/', '.') + '.configs.config'
-		model_arguments = import_module(model_dir_string)
-		Config = getattr(model_arguments, 'Config')
-
-	except:
-		print('Failed to get Config function from ', test_args.model_dir)
+		if os.path.exists(configs_path):
+			model_arguments = load_module_from_file("config", configs_path)
+			Config = getattr(model_arguments, "Config")
+		else:
+			from crowd_nav.configs.config import Config
+	except Exception as e:
+		print("Failed to load Config from", configs_path, ":", e)
 		from crowd_nav.configs.config import Config
+	
 	env_config = config = Config()
 
 
@@ -140,7 +162,7 @@ def main():
 	envs = make_vec_envs(env_name, algo_args.seed, 1,
 						 algo_args.gamma, eval_dir, device, allow_early_resets=True,
 						 config=env_config, ax=ax, test_case=test_args.test_case, pretext_wrapper=config.env.use_wrapper)
-
+	print(envs.observation_space.spaces,envs.action_space)
 	if config.robot.policy not in ['orca', 'social_force']:
 		# load the policy weights
 		actor_critic = Policy(

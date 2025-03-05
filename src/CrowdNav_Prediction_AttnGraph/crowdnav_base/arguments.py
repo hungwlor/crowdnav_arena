@@ -8,7 +8,7 @@ def get_args():
 
     # the saving directory for train.py
     parser.add_argument(
-        '--output_dir', type=str, default='trained_models/my_model')
+        '--output_dir', type=str, default='/home/sora/colcon_ws/src/CrowdNav_Prediction_AttnGraph/crowdnav_base/trained_models/crowdnav_sim')
 
     # resume training from an existing checkpoint or not
     parser.add_argument(
