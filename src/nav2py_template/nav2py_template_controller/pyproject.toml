@@ -1,0 +1,23 @@
+[project]
+name = "nav2py_template_controller"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "==3.10"
+dependencies = [
+    "jinja2",
+    "typeguard",
+    "pyyaml",
+    "lxml",
+    "torch @ https://download.pytorch.org/whl/cu116/torch-1.12.1%2Bcu116-cp310-cp310-linux_x86_64.whl",
+    "gym==0.15.7",
+    "tensorflow-gpu==2.11.0",
+    "Cython",
+    "matplotlib==3.6.2",
+    "opencv_python==4.11.0.86",
+    "joblib==1.4.2",
+    "click==8.1.8",
+    "scipy==1.10.1",
+    "pandas==1.5.2",
+    "tqdm==4.67.1",
+]
