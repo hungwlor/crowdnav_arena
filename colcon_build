@@ -1,0 +1,7 @@
+export TURTLEBOT3_MODEL=waffle
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/humble/share/turtlebot3_gazebo/models
+source /opt/ros/humble/setup.bash
+source /usr/share/gazebo/setup.sh
+colcon build --symlink-install
+source install/nav2py_template_controller/venv/bin/activate
+source install/setup.bash
