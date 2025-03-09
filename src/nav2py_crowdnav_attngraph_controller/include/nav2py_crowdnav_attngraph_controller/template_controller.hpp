@@ -16,7 +16,7 @@
  #include "pluginlib/class_loader.hpp"
  #include "pluginlib/class_list_macros.hpp"
  
- namespace nav2py_template_controller
+ namespace nav2py_crowdnav_attngraph_controller
  {
  
  class TemplateController : public nav2py::Controller
