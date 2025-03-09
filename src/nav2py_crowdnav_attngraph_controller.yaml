@@ -139,8 +139,8 @@ controller_server:
       yaw_goal_tolerance: 0.25
     # DWB parameters
     FollowPath:
-      plugin: "nav2py_template_controller::TemplateController"
-      python_module: "nav2py_template_controller"
+      plugin: "nav2py_crowdnav_attngraph_controller::TemplateController"
+      python_module: "nav2py_crowdnav_attngraph_controller"
       # debug_trajectory_details: True
       # min_vel_x: 0.0
       # min_vel_y: 0.0

@@ -11,11 +11,11 @@ class nav2py_crowdnav_attngraph_controller(nav2py.interfaces.nav2py_costmap_cont
         self._register_callback('data', self._data_callback)
         self._register_callback('path', self._path_callback)
         
-        self.logger = get_logger('nav2py_template_controller')
+        self.logger = get_logger('nav2py_crowdnav_attngraph_controller')
         self.frame_count = 0
         self.path = None
         
-        self.logger.info("nav2py_template_controller initialized")
+        self.logger.info("nav2py_crowdnav_attngraph_controller initialized")
         
     def _path_callback(self, path_):
         """
