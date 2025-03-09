@@ -34,7 +34,7 @@
 
   <export>
     <build_type>ament_cmake</build_type>
-    <nav2_core plugin="${prefix}/nav2py_template_controller.xml" />
+    <nav2_core plugin="${prefix}/nav2py_crowdnav_attngraph_controller.xml" />
   </export>
 
 </package>
