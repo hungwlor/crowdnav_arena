@@ -4,3 +4,10 @@ install
 src/Python-RVO2/
 src/baselines/
 src/slam_toolbox/
+src/2D_lidar_person_detection/
+src/ament_cmake_venv/
+src/ament_cmake_venv_uv/
+src/nav2py
+*.pyc
+*.egg-info/
+__pycache__
